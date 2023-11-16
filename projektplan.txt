@@ -1,0 +1,23 @@
+Bistrogroup2: Jens Helgeson, Oskar Laulajainen, Sam Nosratabadi, Elisabeth Fåk Lloyd, Kristoffer Moldvik 
+
+Vårat projekt går ut på att skapa en hemsida åt en fingerad restaurang. Den ska bestå av fyra undersidor (start/meny(butik)/kontakt) med en sidebar för kundkorgen, och vara illustrerad med bilder. Hemsidan kommer hantera objekt av olika slag (maträtter, dryck) och dessa har i sin tur undergrupper för olika typer av mat eller dryck. 
+
+Man kommer först till startsidan.  
+I toppen finns en sticky header varifrån man kan gå till beställning/meny, kontakt, eller fälla ut en sidebar med kundkorgen.  
+Startsidan ska innehålla stämningsmedia och berätta om restaurangen och maten.  
+Menyn ska stapla upp rätterna i två kolumner (eller en på liten skärm), sedan dryckerna på samma sätt, med avbrott och överskrift för varje undertyp. Varje objekt har en tillhörande knapp för att lägga till maten eller drycken till kundkorgen. Kundkorgen glider ut av sig själv när något läggs till. 
+Kontaktsidan ska visa en adress, telefonnummer, mejladress, öppettider, och en karta. 
+Kundkorgen kan fällas ut och in antingen via en knapp på sidebaren eller uppe i headern. Objekten sorteras efter kategori och underkategori, och har två knappar för att lägga till/ta bort fler av samma objekt. Tas den sista bort försvinner objektet från korgen. Längst ner sammanfattas priset. En knapp för att rensa korgen och en för att betala. Trycker man “betala” får man upp en popup med val för kort eller swish. Om man “går vidare” skickas användaren till en bekräftelseskärm. 
+I botten har vi en footer som innehåller tid för senaste uppdatering och telefon/mejl/adress. 
+
+Vi ska jobba med github, där varje medlem i teamet har varsin branch att pusha till innan det slås ihop med master-branch (efter granskning av minst en annan). Vi organiserar arbetsuppgifterna med Jira, där man högst får ha två tasks igång samtidigt. En prototyp görs i Figma, med mål att kunna få ut en del av CSS:en därifrån.  Eftersom vi har flera undersidor och funktioner på hemsidan kan vi arbeta parallellt på projektet. Tanken är att bryta upp javascripten i flera sidor: Uppbyggnad av sidor med komponenter (det här blir flera stycken), enskilda komponenter, hantering av objekt. 
+ 
+Mål på vägen: 
+
+Stomme i webbläsare, och filstruktur - klar 22/11. 
+
+Hemsidans media på plats (ej kundkorgen) – 23/11. 
+
+Kundkorgen klar med funktion - 25/11. 
+
+Vi siktar på att vara klara till 28/11. 
