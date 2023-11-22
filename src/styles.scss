@@ -1,0 +1,22 @@
+#meals {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.mealBoxes {
+  width: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-style: solid;
+  border-radius: 5%;
+  border-color: bisque;
+  .buttonContainer {
+    display: flex;
+    flex-direction: row;
+  }
+  .mealImages {
+    width: 200px;
+  }
+}
