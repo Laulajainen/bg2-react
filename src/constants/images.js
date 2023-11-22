@@ -1,5 +1,5 @@
-import logo from "../assets/leftlogo.png";
+import toplogo from "../assets/leftlogo.png";
 
 export default {
-  logo,
+  toplogo,
 };
