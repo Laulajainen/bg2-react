@@ -1,3 +1,5 @@
+import GoogleMap from "./Maps";
+
 const text = (
   <h6
     className="contact-content"
@@ -53,21 +55,9 @@ const text2 = (
   </h6>
 );
 const text3 = (
-  <h6
-    className="contact-content"
-    // style={{
-    //   width: "100vh",
-    //   margin: "5vh",
-    //   padding: "2em",
-    //   maxWidth: "40em",
-    //   backgroundColor: "rgba(255,255,255,0.5)",
-    //   fontSize: "21px",
-    //   zIndex: 1,
-    //   backdropFilter: "blur(4px)",
-    // }}
-  >
+  <h6 className="contact-content">
     {" "}
-    Vill du bli vår nya kollega? Hör av sig till jobb@bistro.net{" "}
+    Vill du bli vår nya kollega? Hör av dig till jobb@bistro.net{" "}
   </h6>
 );
 
@@ -86,7 +76,6 @@ export default function Contact() {
         }}
       >
         <div className="app__wrapper_info">
-          <h1>Kontakt</h1>
           <div
             style={{
               width: "150vh",
@@ -99,6 +88,7 @@ export default function Contact() {
               backdropFilter: "blur(4px)",
             }}
           >
+            <h1>Kontakt</h1>
             <div className="app__wrapper_one">{text}</div>
             <div
               className="app__wrapper_one"
@@ -107,9 +97,24 @@ export default function Contact() {
               {text1}
               {text2}
             </div>
+            <div
+              style={{
+                width: "100vh",
+                margin: "10vh",
+                padding: "2em",
+                maxWidth: "40em",
+                backgroundColor: "rgba(255,255,255,0.5)",
+                fontSize: "21px",
+                zIndex: 1,
+                backdropFilter: "blur(4px)",
+              }}
+            >
+              <div id="googleMapss" className="maps">
+                MAPS
+              </div>
+            </div>
             <div className="app__wrapper_one">{text3}</div>
           </div>
-          {/* <div className="app__wrapper_one">{text2}</div> */}
         </div>
       </div>
       <div
