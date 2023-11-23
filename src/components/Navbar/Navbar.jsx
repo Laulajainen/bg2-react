@@ -2,27 +2,31 @@ import React from "react";
 import images from "../../constants/images";
 import "./Navbar.css";
 
+import { Link } from "react-router-dom";
+
 const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar_logo">
-        <img src={images.toplogo} alt="topleftlogo"></img>
+        <Link to="/">
+          <img src={images.toplogo} alt="topleftlogo"></img>
+        </Link>
       </div>
 
-      <ul className="homelinkul">
+      {/* <ul className="homelinkul">
         <li className="homelink">
           <a href="#home">Hem</a>
         </li>
-      </ul>
+      </ul> */}
       <ul className="navbar-links-to-right">
         <li className="menuelink">
-          <a href="#menu">Meny</a>
+          <Link to="menu">Meny</Link>
         </li>
         <li className="contactlink">
-          <a href="#contact">Kontakt</a>
+          <Link to="contact">Kontakt</Link>
         </li>
         <li className="cartlink">
-          <a href="#cart">Kundkorg</a>
+          <Link to="cart">Kundkorg</Link>
         </li>
       </ul>
     </nav>
