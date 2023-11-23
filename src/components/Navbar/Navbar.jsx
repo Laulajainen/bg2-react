@@ -8,25 +8,20 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar_logo">
-        <Link to="/">
+        <Link to="">
           <img src={images.toplogo} alt="topleftlogo"></img>
         </Link>
       </div>
 
-      {/* <ul className="homelinkul">
-        <li className="homelink">
-          <a href="#home">Hem</a>
-        </li>
-      </ul> */}
       <ul className="navbar-links-to-right">
         <li className="menuelink">
-          <Link to="menu">Meny</Link>
+          <Link to="/menu">Meny</Link>
         </li>
         <li className="contactlink">
-          <Link to="contact">Kontakt</Link>
+          <Link to="/contact">Kontakt</Link>
         </li>
         <li className="cartlink">
-          <Link to="cart">Kundkorg</Link>
+          <Link to="/cart">Kundkorg</Link>
         </li>
       </ul>
     </nav>
