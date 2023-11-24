@@ -1,15 +1,23 @@
 import { React } from "react";
-import MealContent from "./MealContent";
+import MealButtons from "./MealButtons";
 
-const MealsTable = ({ meals }) => {
-  const mealBoxes = [];
-  meals.forEach((meals) => {
-    mealBoxes.push(<MealContent meals={meals} key={meals.title} />);
-  });
-  return <div id="meals">{mealBoxes}</div>;
-};
-
-const MealObjects = ({ meals }) => {
-  return <MealsTable meals={meals} />;
-};
-export default MealObjects;
+import meals from "./MealsList";
+export default function MealsObjects() {
+  return (
+    <div id="meals">
+      {meals.map((meals, index) => {
+        return (
+          <div key={index} id={meals.title} className="mealBoxes">
+            <h3>{meals.title}</h3>
+            <img className="mealImages" src={meals.mealImage} alt={"Bild på " + meals.title} />
+            <p>{meals.description}</p>
+            <h4 className="mealPrices">{meals.price + "kr"}</h4>
+            <div className="buttonContainer">
+              <MealButtons />
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
