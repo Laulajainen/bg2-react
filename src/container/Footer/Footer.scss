@@ -1,0 +1,32 @@
+.footer {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(226, 223, 223, 0.7);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  padding-top: 0;
+}
+
+.footer-links {
+  /* width: 100%; */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 5rem;
+  padding: 0 2rem;
+}
+
+.footer-links_contact,
+.footer-links_work {
+  flex: 1;
+  margin-right: 3rem;
+  text-align: center;
+}
+
+.footer__copyright {
+  margin-top: 3rem;
+}

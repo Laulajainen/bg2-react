@@ -1,0 +1,31 @@
+import React from "react";
+import images from "../../constants/images";
+import "./Navbar.css";
+
+import { Link } from "react-router-dom";
+
+const Navbar = () => {
+  return (
+    <nav className="navbar">
+      <div className="navbar_logo">
+        <Link to="">
+          <img src={images.toplogo} alt="topleftlogo"></img>
+        </Link>
+      </div>
+
+      <ul className="navbar-links-to-right">
+        <li className="menuelink">
+          <Link to="/menu">Meny</Link>
+        </li>
+        <li className="contactlink">
+          <Link to="/contact">Kontakt</Link>
+        </li>
+        <li className="cartlink">
+          <Link to="/cart">Kundkorg</Link>
+        </li>
+      </ul>
+    </nav>
+  );
+};
+
+export default Navbar;
