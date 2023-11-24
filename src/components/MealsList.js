@@ -1,4 +1,3 @@
-import MealContent from "./MealContent";
 const meals = [
   {
     title: "Laxen",

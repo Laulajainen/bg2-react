@@ -1,16 +1,15 @@
-import { React, useState } from "react";
+import { React } from "react";
 import MealContent from "./MealContent";
-import meals from "./MealsList";
 
-function MealsTable({ meals }) {
-  const rows = [];
+const MealsTable = ({ meals }) => {
+  const mealBoxes = [];
   meals.forEach((meals) => {
-    rows.push(<MealContent meals={meals} key={meals.title} />);
+    mealBoxes.push(<MealContent meals={meals} key={meals.title} />);
   });
-  return <div id="meals">{rows}</div>;
-}
+  return <div id="meals">{mealBoxes}</div>;
+};
 
-function MealObjects() {
+const MealObjects = ({ meals }) => {
   return <MealsTable meals={meals} />;
-}
+};
 export default MealObjects;

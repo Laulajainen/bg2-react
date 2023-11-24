@@ -1,7 +1,8 @@
 import { React, useState } from "react";
+import MealButtons from "./MealButtons";
 
 const MealContent = ({ meals }) => {
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(meals.count);
   meals.count = counter;
   const increase = () => {
     setCounter((count) => count + 1);
@@ -24,6 +25,7 @@ const MealContent = ({ meals }) => {
       <p>{meals.description}</p>
       <h4 className="mealPrices">{meals.price + "kr"}</h4>
       <div className="buttonContainer">
+        <MealButtons meals={meals} />
         <button className="control__btn" onClick={decrease}>
           -
         </button>

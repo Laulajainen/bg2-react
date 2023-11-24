@@ -5,11 +5,12 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./container/Footer/Footer";
 import MealObjects from "./components/MealObjects";
 import FoodCart from "./components/FoodCart";
+import meals from "./components/MealsList";
 const App = () => (
   <div>
     <Navbar />
-    <MealObjects />
-    <FoodCart />
+    <MealObjects meals={meals} />
+    <FoodCart meals={meals} />
     <Footer />
   </div>
 );
