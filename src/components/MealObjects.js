@@ -1,8 +1,7 @@
 import { React } from "react";
 import MealButtons from "./MealButtons";
 
-import meals from "./MealsList";
-export default function MealsObjects() {
+export default function MealsObjects({ meals }) {
   return (
     <div id="meals">
       {meals.map((meals, index) => {
@@ -13,7 +12,7 @@ export default function MealsObjects() {
             <p>{meals.description}</p>
             <h4 className="mealPrices">{meals.price + "kr"}</h4>
             <div className="buttonContainer">
-              <MealButtons />
+              <MealButtons mealsCount={meals.count} />
             </div>
           </div>
         );

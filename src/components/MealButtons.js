@@ -1,13 +1,13 @@
 import { React, useState } from "react";
-const MealButtons = () => {
-  const [counter, setCounter] = useState(0);
+export default function MealButtons({ mealsCount }) {
+  const [counter, setCounter] = useState(mealsCount);
   const increase = () => {
-    setCounter((count) => count + 1);
+    setCounter((mealsCount) => mealsCount + 1);
   };
 
   const decrease = () => {
     if (counter > 0) {
-      setCounter((count) => count - 1);
+      setCounter((mealsCount) => mealsCount - 1);
     }
   };
   return (
@@ -21,6 +21,4 @@ const MealButtons = () => {
       </button>
     </div>
   );
-};
-
-export default MealButtons;
+}

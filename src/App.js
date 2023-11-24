@@ -6,11 +6,12 @@ import Footer from "./container/Footer/Footer";
 import MealObjects from "./components/MealObjects";
 import FoodCart from "./components/FoodCart";
 import meals from "./components/MealsList";
+
 const App = () => (
   <div>
     <Navbar />
-    <MealObjects meals={meals} />
-    <FoodCart meals={meals} />
+    <MealObjects meals={meals} mealsCount={meals.count} />
+    <FoodCart meals={meals} mealsCount={meals.count} />
     <Footer />
   </div>
 );
