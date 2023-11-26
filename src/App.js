@@ -1,3 +1,5 @@
+import "./App.css";
+import "./styles.css";
 import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./container/Footer/Footer";
@@ -25,5 +27,4 @@ const App = () => {
     </>
   );
 };
-
 export default App;

@@ -17,8 +17,7 @@
 .mealBoxes .buttonContainer {
   display: flex;
   flex-direction: row;
-  padding-top: 10px;
 }
 .mealBoxes .mealImages {
   width: 200px;
-} /*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
