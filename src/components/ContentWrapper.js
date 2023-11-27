@@ -3,7 +3,8 @@
 
 export default function ContentWrapper({ children }) {
   return (
-    <div className="wrapper"
+    <div
+      className="wrapper"
       // style={{
       //   position: "relative",
       //   backgroundImage: "url(/img/start_bg.jpg)",
