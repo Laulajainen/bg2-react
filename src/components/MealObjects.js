@@ -5,7 +5,7 @@ import BackgroundCover from "./Background";
 
 export default function MealsObjects({ mealData, changeMealCounter }) {
   return (
-    <ContentWrapper style={{ display: "flex", justifyContent: "center" }}>
+    <ContentWrapper>
       <div id="meals">
         {mealData.map((meal, index) => {
           return (
