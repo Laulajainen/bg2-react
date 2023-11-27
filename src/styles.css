@@ -16,7 +16,12 @@
 #meals .mealBoxes .allergyContainer {
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  list-style: none;
+  padding-right: 80px;
+}
+#meals .mealBoxes .allergyContainer .allergyContent {
+  margin: 5px;
+  border-radius: 15%;
 }
 #meals .mealBoxes .allergyContainer img {
   width: 50px;
@@ -52,17 +57,15 @@
      object-fit: cover;
 }
 
-#confirmation {
-  max-width: 50em;
-  justify-content: center;
-  z-index: 3;
-}
 #confirmation .confirmationAlign {
   display: flex;
   flex: 1;
   flex-grow: 1;
   justify-content: center;
   align-content: center;
+  max-width: 50em;
+  justify-content: center;
+  z-index: 3;
 }
 #confirmation .confirmationAlign .confirmationMessage {
   max-width: -moz-fit-content;
@@ -112,17 +115,11 @@
   background-color: rgba(255, 255, 255, 0.5);
   border-color: bisque;
 }
-.navbar .homelinkul .allergyContainer {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding-right: 80px;
-}
-.navbar .homelinkul .allergyContainer li {
+.navbar .homelinkul li {
   cursor: pointer;
   text-decoration: none;
 }
-.navbar .homelinkul .allergyContainer a {
+.navbar .homelinkul a {
   display: flex;
   text-decoration: none;
   color: #000;
@@ -135,19 +132,19 @@
   line-height: normal;
   letter-spacing: 0.8px;
 }
-.navbar .homelinkul .navbar-links-to-right {
+.navbar .navbar-links-to-right {
   display: inline-flex;
   padding: 10px;
   text-decoration: none;
   list-style: none;
 }
-.navbar .homelinkul .navbar-links-to-right li {
+.navbar .navbar-links-to-right li {
   margin: 0 1rem;
   border-radius: 30px;
   background: rgba(197, 110, 51, 0.7);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.navbar .homelinkul .navbar-links-to-right a {
+.navbar .navbar-links-to-right a {
   padding: 10px;
   color: #000;
   text-align: center;
@@ -156,18 +153,18 @@
   font-style: normal;
   text-decoration: none;
 }
-.navbar .homelinkul .navbar-links-to-right .buttonContainer {
+.navbar .navbar-links-to-right .buttonContainer {
   display: flex;
   flex-direction: row;
   margin: 5px;
   width: 5em;
   justify-content: space-around;
 }
-.navbar .homelinkul .navbar-links-to-right li :hover {
+.navbar .navbar-links-to-right li :hover {
   text-decoration: underline;
   color: #2563eb;
 }
-.navbar .homelinkul .navbar-links-to-right .control_btn {
+.navbar .navbar-links-to-right .control_btn {
   width: 10vw;
 }
 

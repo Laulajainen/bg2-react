@@ -12,12 +12,16 @@
     border-style: solid;
     border-radius: 5%;
     border-color: bisque;
-
     .allergyContainer {
       display: flex;
       justify-content: center;
       list-style: none;
       padding-right: 80px;
+      .allergyContent {
+        margin: 5px;
+        border-radius: 15%;
+      }
+
       img {
         width: 50px;
         height: 50px;
@@ -122,64 +126,64 @@
 
     border-color: bisque;
 
-      li {
-        cursor: pointer;
-        text-decoration: none;
-      }
-      a {
-        display: flex;
-        text-decoration: none;
-        color: #000;
-        text-align: center;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        font-family: Inter;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: bold;
-        line-height: normal;
-        letter-spacing: 0.8px;
-      }
+    li {
+      cursor: pointer;
+      text-decoration: none;
+    }
+    a {
+      display: flex;
+      text-decoration: none;
+      color: #000;
+      text-align: center;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      font-family: Inter;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: bold;
+      line-height: normal;
+      letter-spacing: 0.8px;
+    }
+  }
+
+  .navbar-links-to-right {
+    display: inline-flex;
+    padding: 10px;
+    text-decoration: none;
+    list-style: none;
+
+    li {
+      margin: 0 1rem;
+      border-radius: 30px;
+      background: rgba(197, 110, 51, 0.7);
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+    a {
+      padding: 10px;
+      color: #000;
+      text-align: center;
+      font-family: Inter;
+      font-size: 30px;
+      font-style: normal;
+      text-decoration: none;
     }
 
-    .navbar-links-to-right {
-      display: inline-flex;
-      padding: 10px;
-      text-decoration: none;
-      list-style: none;
-
-      li {
-        margin: 0 1rem;
-        border-radius: 30px;
-        background: rgba(197, 110, 51, 0.7);
-        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-      }
-      a {
-        padding: 10px;
-        color: #000;
-        text-align: center;
-        font-family: Inter;
-        font-size: 30px;
-        font-style: normal;
-        text-decoration: none;
-      }
-
-      .buttonContainer {
-        display: flex;
-        flex-direction: row;
-        margin: 5px;
-        width: 5em;
-        justify-content: space-around;
-      }
-      li :hover {
-        text-decoration: underline;
-        color: #2563eb;
-      }
-      .control_btn {
-        width: 10vw;
-      }
+    .buttonContainer {
+      display: flex;
+      flex-direction: row;
+      margin: 5px;
+      width: 5em;
+      justify-content: space-around;
+    }
+    li :hover {
+      text-decoration: underline;
+      color: #2563eb;
+    }
+    .control_btn {
+      width: 10vw;
     }
   }
 }
+
 .wrapper {
   position: relative;
   background-image: url("../public/img/start_bg.jpg");
