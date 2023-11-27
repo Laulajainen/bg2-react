@@ -1,8 +1,11 @@
 import { React } from "react";
 import MealButtons from "./MealButtons";
+import ContentWrapper from "./ContentWrapper";
+import BackgroundCover from "./Background";
 
 export default function MealsObjects({ mealData, changeMealCounter }) {
   return (
+  <ContentWrapper>
     <div id="meals">
       {mealData.map((meal, index) => {
         return (
@@ -45,9 +48,10 @@ export default function MealsObjects({ mealData, changeMealCounter }) {
                 changeMealCounter={changeMealCounter}
               />
             </div>
-          </div>
-        );
-      })}
-    </div>
+          );
+        })}
+      </div>
+      <BackgroundCover />
+    </ContentWrapper>
   );
 }
