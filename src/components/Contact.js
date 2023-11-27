@@ -93,7 +93,7 @@ const url =
 
 function Maps() {
   return (
-    <div>
+    <div className="click-maps" onClick={() => window.open(url, "_blank")}>
       <div
         className="click-maps"
         style={{
