@@ -10,6 +10,7 @@ import Foodcart from "../FoodCart";
 const Navbar = ({ mealData, changeMealCounter }) => {
   function CartButton({ mealData, changeMealCounter }) {
     const [show, setShow] = useState(true);
+
     return (
       <div>
         <button className="cartbutton" onClick={() => setShow(!show)}>
