@@ -23,12 +23,8 @@ const App = () => {
 
   return (
     <>
-      <Navbar />
-      <FoodCart
-        mealData={mealData}
-        changeMealCounter={changeMealCounter}
-      />{" "}
-      {/*Data och funktion går iväg*/}
+      <Navbar mealData={mealData} changeMealCounter={changeMealCounter} />
+      {/*<FoodCart mealData={mealData} changeMealCounter={changeMealCounter}/> Data och funktion går iväg*/}
       <div className="container">
         {
           <Routes>
@@ -42,7 +38,8 @@ const App = () => {
                 />
               }
             />
-            {<Route path="/contact" element={<Contact />} />}
+            {/* <Route path="Kontakt" element={<Contact />} /> */}
+            {/* <Route path="Kundkorg" element={<FoodCart />} /> */}
           </Routes>
         }
       </div>

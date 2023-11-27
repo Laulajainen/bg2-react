@@ -4,8 +4,22 @@ import "./Navbar.css";
 import { TiShoppingCart } from "react-icons/ti";
 
 import { Link } from "react-router-dom";
-
-const Navbar = () => {
+import { useState } from "react";
+import Foodcart from "../FoodCart";
+function CartButton({ mealData, changeMealCounter }) {
+  const [show, setShow] = useState(true);
+  return (
+    <div className="App">
+      <button onClick={() => setShow(!show)}>
+        {show ? "Hide" : "Show"} component
+      </button>
+      {show ? (
+        <Foodcart mealData={mealData} changeMealCounter={changeMealCounter} />
+      ) : null}
+    </div>
+  );
+}
+const Navbar = ({ mealData, changeMealCounter }) => {
   return (
     <nav className="navbar">
       <div className="navbar_logo">
@@ -21,11 +35,7 @@ const Navbar = () => {
         <li className="contactlink">
           <Link to="/contact">Kontakt</Link>
         </li>
-        <li className="cartlink">
-          <Link to="/cart">
-            <TiShoppingCart />
-          </Link>
-        </li>
+        <CartButton mealData={mealData} changeMealCounter={changeMealCounter} />
       </ul>
     </nav>
   );

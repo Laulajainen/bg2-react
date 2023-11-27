@@ -6,11 +6,15 @@ export default function Foodcart({ mealData, changeMealCounter }) {
     <div id="meals">
       {mealData.map((meal, index) => {
         return (
-          <div key={index} id={meal.title} className="mealBoxes">
+          <div key={index} className="mealBoxes">
             <h3>{meal.title}</h3>
             <h4 className="mealPrices">{meal.price + "kr"}</h4>
             <div className="buttonContainer">
-              <MealButtons index={index} mealsCount={meal.count} changeMealCounter={changeMealCounter} />
+              <MealButtons
+                index={index}
+                mealsCount={meal.count}
+                changeMealCounter={changeMealCounter}
+              />
             </div>
           </div>
         );

@@ -2,8 +2,6 @@ const text = (
   <h6
     className="contact-content"
     style={{
-      width: "100vh",
-      margin: "10vh",
       padding: "2em",
       maxWidth: "40em",
       backgroundColor: "rgba(255,255,255,0.5)",
@@ -20,8 +18,6 @@ const text1 = (
   <h6
     className="contact-content"
     style={{
-      width: "40vh",
-      margin: "10vh",
       padding: "2em",
       maxWidth: "40em",
       backgroundColor: "rgba(255,255,255,0.5)",
@@ -38,8 +34,6 @@ const text2 = (
   <h6
     className="contact-content"
     style={{
-      width: "40vh",
-      margin: "10vh",
       padding: "2em",
       maxWidth: "40em",
       backgroundColor: "rgba(255,255,255,0.5)",
@@ -52,6 +46,38 @@ const text2 = (
     Mejl: boka@bistro.net{" "}
   </h6>
 );
+const map = (
+  <div
+    style={{
+      display: "flex",
+      flexDirection: "row",
+      margin: "10vw",
+      padding: "2em",
+      backgroundColor: "rgba(255,255,255,0.5)",
+      fontSize: "21px",
+      zIndex: 1,
+      backdropFilter: "blur(4px)",
+    }}
+  >
+    <h6 className="contact-content">
+      {" "}
+      <img src="./assets/map.JPG" style={{ width: "100%" }} />
+      <div
+        style={{
+          padding: "5vh",
+          display: "flex",
+          flexDirection: "column",
+          alignContent: "center",
+          justifyContent: "center",
+          fontSize: "21px",
+        }}
+      >
+        <div>Tucgatan 1</div>
+        <div>565 37 Linköping</div>
+      </div>{" "}
+    </h6>
+  </div>
+);
 const text3 = (
   <h6 className="contact-content">
     {" "}
@@ -59,11 +85,51 @@ const text3 = (
   </h6>
 );
 
+const url =
+  "https://www.google.com/maps/place/TUC+Sweden+Link%C3%B6ping/@58.4344701,15.5954871,17z/data=!4m6!3m5!1s0x46596f7bebd18f03:0xc3553c64a8fe49f5!8m2!3d58.4345026!4d15.5968695!16s%2Fg%2F11fz7nlnff?entry=ttu";
+
+function Maps() {
+  return (
+    <div classname="click-maps" onClick={() => window.open(url, "_blank")}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          margin: "10vw",
+          padding: "2em",
+          backgroundColor: "rgba(255,255,255,0.5)",
+          fontSize: "21px",
+          zIndex: 1,
+          backdropFilter: "blur(4px)",
+        }}
+      >
+        <h6 className="contact-content">
+          {" "}
+          <img src="./assets/map.JPG" style={{ width: "100%" }} />
+          <div
+            style={{
+              padding: "5vh",
+              display: "flex",
+              flexDirection: "column",
+              alignContent: "center",
+              justifyContent: "center",
+              fontSize: "21px",
+            }}
+          >
+            <div>Tucgatan 1</div>
+            <div>565 37 Linköping</div>
+          </div>{" "}
+        </h6>
+      </div>
+    </div>
+  );
+}
+
 export default function Contact() {
   return (
     <>
       <div
-        className="app__bg app__wrapper"
+        className="background_contact"
         style={{
           position: "relative",
           display: "flex",
@@ -73,45 +139,54 @@ export default function Contact() {
           backgroundSize: "cover",
         }}
       >
-        <div className="app__wrapper_info">
+        <div
+          className="contact_info"
+          style={{
+            display: "flex",
+            justifyContent: "space-evenly",
+            textAlign: "center",
+          }}
+        >
           <div
             style={{
-              width: "150vh",
-              margin: "5vh",
-              padding: "2em",
-              maxWidth: "40em",
+              display: "flex",
+              justifyContent: "center",
               backgroundColor: "rgba(255,255,255,0.5)",
               fontSize: "21px",
+              flexDirection: "column",
               zIndex: 1,
               backdropFilter: "blur(4px)",
+              maxWidth: "100vw",
             }}
           >
             <h1>Kontakt</h1>
-            <div className="app__wrapper_one">{text}</div>
             <div
-              className="app__wrapper_one"
-              style={{ display: "flex", flexDirection: "row" }}
-            >
-              {text1}
-              {text2}
-            </div>
-            <div
+              className="contact_one"
               style={{
-                width: "100vh",
-                margin: "10vh",
-                padding: "2em",
-                maxWidth: "40em",
-                backgroundColor: "rgba(255,255,255,0.5)",
-                fontSize: "21px",
-                zIndex: 1,
-                backdropFilter: "blur(4px)",
+                display: "flex",
+                justifyContent: "center",
+                flexDirection: "column",
+                width: "100%",
               }}
             >
-              <div id="googleMapss" className="maps">
-                MAPS
+              <div style={{ display: "flex", justifyContent: "center" }}>
+                {text}
               </div>
+              <div
+                className="contact_one"
+                style={{
+                  display: "flex",
+                  flexDirection: "row",
+                  justifyContent: "space-around",
+                }}
+              >
+                {text1}
+                {text2}
+              </div>
+
+              <Maps />
+              {text3}
             </div>
-            <div className="app__wrapper_one">{text3}</div>
           </div>
         </div>
       </div>
