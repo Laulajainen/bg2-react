@@ -26,31 +26,35 @@ function ConfirmationText({ meals }) {
   const result = sortItems(meals);
   return (
     <section
-      className="startText"
-      style={{
-        maxheight: "fitcontent",
-        margin: "5vh",
-        padding: "2em",
-        maxWidth: "20em",
-        backgroundColor: "rgba(255,255,255,0.5)",
-        fontSize: "21px",
-        zIndex: 1,
-        backdropFilter: "blur(4px)",
-        textAlign: "center",
-      }}
+      className="confirmationMessage"
+      // style={{
+      //   maxheight: "fitcontent",
+      //   margin: "5vh",
+      //   padding: "2em",
+      //   maxWidth: "20em",
+      //   backgroundColor: "rgba(255,255,255,0.5)",
+      //   fontSize: "21px",
+      //   zIndex: 1,
+      //   backdropFilter: "blur(4px)",
+      //   textAlign: "center",
+      // }}
     >
       <h2>Tack för din beställning!</h2>
 
       <h4>Det här är din order:</h4>
 
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div className="tableContainer" 
+      // style={{ display: "flex", justifyContent: "center" }}
+      >
         <table>
           <tbody>
             <ListedItems result={result} />
             <tr>
               <td></td>
               <td></td>
-              <td style={{ textAlign: "right", borderTop: "1px solid" }}>
+              <td id="sumCell" 
+              // style={{ textAlign: "right", borderTop: "1px solid" }}
+              >
                 {getTotal(meals)} kr
               </td>
             </tr>
@@ -115,20 +119,22 @@ export default function Confirmation(meals) {
   ];
 
   return (
-    <ContentWrapper>
-      <div
-        style={{
-          display: "flex",
-          flex: 1,
-          flexGrow: 1,
-          justifyContent: "center",
-          alignContent: "center",
-        }}
-      >
-        <ConfirmationText meals={meals} />
+    <div id="confirmation">
+      <ContentWrapper>
+        <div className="confirmationAlign"
+          // style={{
+          //   display: "flex",
+          //   flex: 1,
+          //   flexGrow: 1,
+          //   justifyContent: "center",
+          //   alignContent: "center",
+          // }}
+        >
+          <ConfirmationText meals={meals} />
+        </div>
+        <BackgroundCover />
+      </ContentWrapper>
       </div>
-      <BackgroundCover />
-    </ContentWrapper>
   );
 }
 

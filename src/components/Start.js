@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ContentWrapper from "./ContentWrapper";
-import BackgroundCover from "./Background";
+import BackgroundCover from "./BackgroundCover";
 
 export default function Start() {
   // const [scrollPosition, setScrollPosition] = useState(0);
@@ -20,16 +20,16 @@ export default function Start() {
 
   const textContent = (
     <p
-      className="startText"
-      style={{
-        margin: "5vh",
-        padding: "2em",
-        maxWidth: "40em",
-        backgroundColor: "rgba(255,255,255,0.5)",
-        fontSize: "21px",
-        zIndex: 1,
-        backdropFilter: "blur(4px)",
-      }}
+      className="startTextBlock"
+      // style={{
+      //   margin: "5vh",
+      //   padding: "2em",
+      //   maxWidth: "40em",
+      //   backgroundColor: "rgba(255,255,255,0.5)",
+      //   fontSize: "21px",
+      //   zIndex: 1,
+      //   backdropFilter: "blur(4px)",
+      // }}
     >
       Consectetur officia nisi voluptate adipisicing cillum magna officia sint
       duis Lorem. Eu dolor nostrud aliqua ullamco ad Lorem. Reprehenderit fugiat
@@ -58,18 +58,19 @@ export default function Start() {
     let randomPath = Math.floor(Math.random() * 3);
     return (
       <div
-        style={{
-          position: "relative",
-          display: "flex",
-          justifyContent: "center",
-        }}
+        className="videoContainer"
+        // style={{
+        //   position: "relative",
+        //   display: "flex",
+        //   justifyContent: "center",
+        // }}
       >
         <video
           autoPlay
           muted
           loop
           id="backgroundVideo"
-          style={{ height: "100vh", width: "100vw", objectFit: "cover" }}
+          // style={{ height: "100vh", width: "100vw", objectFit: "cover" }}
         >
           <source src={videoBGPaths[randomPath]} type="video/mp4" />
           Your browser does not support the video tag.
@@ -82,7 +83,8 @@ export default function Start() {
     return textArray.map((textParagraph, index) => {
       const position = index % 2 === 0 ? "flex-start" : "flex-end";
       return (
-        <div key={index} style={{ display: "flex", justifyContent: position }}>
+        <div className="textBlockHolder" key={index} 
+        style={{ display: "flex", justifyContent: position }}>
           {textParagraph}
         </div>
       );
@@ -90,13 +92,15 @@ export default function Start() {
   }
 
   return (
-    <ContentWrapper>
-      <Video />
-      <div id="startTextWrapper">
-        <TextSection />
-      </div>
+    <div id="start">
+      <ContentWrapper>
+        <Video />
+        <div id="startTextWrapper">
+          <TextSection />
+        </div>
 
-      <BackgroundCover />
-    </ContentWrapper>
+        <BackgroundCover />
+      </ContentWrapper>
+      </div>
   );
 }
