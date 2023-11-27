@@ -7,7 +7,6 @@ import MealObjects from "./components/MealObjects";
 import Start from "./components/Start";
 import Contact from "./components/Contact";
 import Meals from "./components/MealsList";
-import Contact from "./components/Contact";
 
 import { Route, Routes } from "react-router-dom";
 
@@ -35,12 +34,7 @@ const App = () => {
             <Route path="" element={<Start />} />
             <Route
               path="/menu"
-              element={
-                <MealObjects
-                  mealData={mealData}
-                  changeMealCounter={changeMealCounter}
-                />
-              }
+              element={<MealObjects mealData={mealData} changeMealCounter={changeMealCounter} />}
             />
             <Route path="/contact" element={<Contact />} />
           </Routes>
