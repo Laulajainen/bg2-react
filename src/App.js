@@ -6,6 +6,7 @@ import Footer from "./container/Footer/Footer";
 import MealObjects from "./components/MealObjects";
 import FoodCart from "./components/FoodCart";
 import Start from "./components/Start";
+import Contact from "./components/Contact";
 import Meals from "./components/MealsList";
 
 import { Route, Routes } from "react-router-dom";
@@ -28,15 +29,9 @@ const App = () => {
         {
           <Routes>
             <Route path="" element={<Start />} />
-            <Route
-              path="/menu"
-              element={
-                <MealObjects
-                  mealData={mealData}
-                  changeMealCounter={changeMealCounter}
-                />
-              }
-            />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/menu" element={<MealObjects mealData={mealData} changeMealCounter={changeMealCounter}/>} /> 
+
             {/* <Route path="Kontakt" element={<Contact />} /> */}
             {/* <Route path="Kundkorg" element={<FoodCart />} /> */}
           </Routes>

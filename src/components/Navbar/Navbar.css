@@ -1,5 +1,5 @@
 .navbar {
-  max-width: 100vw;
+  width: 100%;
   height: 100%;
   display: flex;
   justify-content: space-around;
@@ -8,9 +8,6 @@
   padding-top: 10px;
   background: rgba(226, 223, 223, 0.7);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-
-  top: 0;
-  z-index: 3;
 }
 
 .navbar_logo {
@@ -18,8 +15,33 @@
   justify-content: flex-start;
 }
 
-.navbar-links-to-right {
+.homelinkul {
+  flex: 1;
   display: flex;
+  justify-content: center;
+  list-style: none;
+  padding-right: 80px;
+}
+.homelinkul li {
+  cursor: pointer;
+  text-decoration: none;
+}
+.homelinkul a {
+  display: flex;
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Inter;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 0.8px;
+}
+
+.navbar-links-to-right {
+  display: inline-flex;
   padding: 10px;
   text-decoration: none;
   list-style: none;
@@ -43,4 +65,4 @@
 li :hover {
   text-decoration: underline;
   color: #2563eb;
-} /*# sourceMappingURL=Navbar.css.map */
+}/*# sourceMappingURL=Navbar.css.map */

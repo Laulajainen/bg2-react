@@ -1,7 +1,7 @@
 .footer {
   width: 100%;
   position: relative;
-  z-index: 3;
+  z-index: 1;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -12,6 +12,7 @@
 }
 
 .footer-links {
+  /* width: 100%; */
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -28,4 +29,4 @@
 
 .footer__copyright {
   margin-top: 3rem;
-} /*# sourceMappingURL=Footer.css.map */
+}/*# sourceMappingURL=Footer.css.map */
