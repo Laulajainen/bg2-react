@@ -6,11 +6,7 @@ import Footer from "./container/Footer/Footer";
 import MealObjects from "./components/MealObjects";
 import FoodCart from "./components/FoodCart";
 import Start from "./components/Start";
-<<<<<<< HEAD
-import Contact from "./components/Contact";
-=======
 import Meals from "./components/MealsList";
->>>>>>> master
 
 import { Route, Routes } from "react-router-dom";
 
@@ -32,13 +28,16 @@ const App = () => {
         {
           <Routes>
             <Route path="" element={<Start />} />
-<<<<<<< HEAD
-            <Route path="/menu" element={<MealObjects />} />
-            <Route path="/contact" element={<Contact />} />
-=======
-            <Route path="/menu" element={<MealObjects mealData={mealData} changeMealCounter={changeMealCounter}/>} /> 
+            <Route
+              path="/menu"
+              element={
+                <MealObjects
+                  mealData={mealData}
+                  changeMealCounter={changeMealCounter}
+                />
+              }
+            />
             {/* <Route path="Kontakt" element={<Contact />} /> */}
->>>>>>> master
             {/* <Route path="Kundkorg" element={<FoodCart />} /> */}
           </Routes>
         }
