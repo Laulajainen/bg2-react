@@ -1,6 +1,7 @@
 import React from "react";
 import images from "../../constants/images";
 import "./Navbar.css";
+import { TiShoppingCart } from "react-icons/ti";
 
 import { Link } from "react-router-dom";
 
@@ -21,7 +22,9 @@ const Navbar = () => {
           <Link to="/contact">Kontakt</Link>
         </li>
         <li className="cartlink">
-          <Link to="/cart">Kundkorg</Link>
+          <Link to="/cart">
+            <TiShoppingCart />
+          </Link>
         </li>
       </ul>
     </nav>
