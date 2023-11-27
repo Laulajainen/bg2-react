@@ -2,21 +2,34 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  max-width: 50em;
+  justify-content: center;
+  z-index: 3;
 }
 #meals .mealBoxes {
   width: 250px;
   display: flex;
   justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  text-align: center;
   flex-direction: column;
   border-style: solid;
   border-radius: 5%;
   border-color: bisque;
+  margin: 1em;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 #meals .mealBoxes .allergyContainer {
   display: flex;
-  justify-content: center;
   flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  padding-right: 80px;
+}
+#meals .mealBoxes .allergyContainer .allergyContent {
+  margin: 5px;
+  border-radius: 15%;
 }
 #meals .mealBoxes .allergyContainer img {
   width: 50px;
@@ -25,9 +38,23 @@
 #meals .mealBoxes .buttonContainer {
   display: flex;
   flex-direction: row;
+  margin: 5px;
+  width: 5em;
+  justify-content: space-around;
+  z-index: 1;
+}
+#meals .mealBoxes .buttonContainer .counter__output {
+  border-radius: 15%;
+  border-style: solid;
+  border-width: 2px;
+  background-color: white;
+  width: 1em;
 }
 #meals .mealBoxes .mealImages {
   width: 200px;
+}
+#meals .mealBoxes .control_btn {
+  width: 10vw;
 }
 
 #start .textBlockHolder .startTextBlock {
@@ -104,17 +131,15 @@
   justify-content: space-around;
 }
 
-#confirmation {
-  max-width: 50em;
-  justify-content: center;
-  z-index: 3;
-}
 #confirmation .confirmationAlign {
   display: flex;
   flex: 1;
   flex-grow: 1;
   justify-content: center;
   align-content: center;
+  max-width: 50em;
+  justify-content: center;
+  z-index: 3;
 }
 #confirmation .confirmationAlign .confirmationMessage {
   max-width: -moz-fit-content;
@@ -142,13 +167,16 @@
   width: 100%;
   height: 100%;
   display: flex;
+  z-index: 3;
   justify-content: space-around;
   align-items: center;
-  z-index: 3;
   position: sticky;
   padding-top: 10px;
   background: rgba(226, 223, 223, 0.7);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  top: 0;
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
 }
 .navbar .navbar_logo {
   display: flex;
@@ -164,17 +192,11 @@
   background-color: rgba(255, 255, 255, 0.5);
   border-color: bisque;
 }
-.navbar .homelinkul .allergyContainer {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  padding-right: 80px;
-}
-.navbar .homelinkul .allergyContainer li {
+.navbar .homelinkul li {
   cursor: pointer;
   text-decoration: none;
 }
-.navbar .homelinkul .allergyContainer a {
+.navbar .homelinkul a {
   display: flex;
   text-decoration: none;
   color: #000;
@@ -187,19 +209,20 @@
   line-height: normal;
   letter-spacing: 0.8px;
 }
-.navbar .homelinkul .navbar-links-to-right {
+.navbar .navbar-links-to-right {
   display: inline-flex;
   padding: 10px;
   text-decoration: none;
   list-style: none;
 }
-.navbar .homelinkul .navbar-links-to-right li {
+.navbar .navbar-links-to-right li {
+  max-height: 36px;
   margin: 0 1rem;
   border-radius: 30px;
   background: rgba(197, 110, 51, 0.7);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.navbar .homelinkul .navbar-links-to-right a {
+.navbar .navbar-links-to-right a {
   padding: 10px;
   color: #000;
   text-align: center;
@@ -208,19 +231,9 @@
   font-style: normal;
   text-decoration: none;
 }
-.navbar .homelinkul .navbar-links-to-right .buttonContainer {
-  display: flex;
-  flex-direction: row;
-  margin: 5px;
-  width: 5em;
-  justify-content: space-around;
-}
-.navbar .homelinkul .navbar-links-to-right li :hover {
+.navbar .navbar-links-to-right li :hover {
   text-decoration: underline;
   color: #2563eb;
-}
-.navbar .homelinkul .navbar-links-to-right .control_btn {
-  width: 10vw;
 }
 
 
@@ -275,7 +288,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: 0;
   overflow-y: auto;
   background-color: rgba(255, 255, 255, 0.2);
 }/*# sourceMappingURL=styles.css.map */
