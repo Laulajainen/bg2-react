@@ -12,6 +12,42 @@ const meals = [
       "https://cdn.pixabay.com/photo/2014/11/05/15/57/salmon-518032_960_720.jpg",
   },
   {
+    title: "Grillbrickan",
+    description: "Den tar aldrig slut... aldrig!",
+    price: 99,
+    containsNuts: false,
+    containsEggs: true,
+    containsGluten: true,
+    type: "Huvudrätt",
+    count: 0,
+    mealImage:
+      "https://cdn.pixabay.com/photo/2017/01/15/14/26/barbeque-1981640_960_720.jpg",
+  },
+  {
+    title: "Tacos",
+    description: "Bettans bästa",
+    price: 99,
+    containsNuts: false,
+    containsEggs: true,
+    containsGluten: true,
+    type: "Huvudrätt",
+    count: 0,
+    mealImage:
+      "https://cdn.pixabay.com/photo/2019/09/26/04/01/tacos-pastor-4505032_960_720.jpg",
+  },
+  {
+    title: "Kebabspett",
+    description: "Sams favorit",
+    price: 99,
+    containsNuts: false,
+    containsEggs: false,
+    containsGluten: true,
+    type: "Huvudrätt",
+    count: 0,
+    mealImage:
+      "https://cdn.pixabay.com/photo/2018/05/03/05/19/skewer-3370443_960_720.jpg",
+  },
+  {
     title: "Kycklingspett",
     description: "Detta är gott pga. nötter",
     price: 99,
@@ -46,6 +82,42 @@ const meals = [
     count: 0,
     mealImage:
       "https://cdn.pixabay.com/photo/2016/07/21/11/17/drink-1532300_960_720.jpg",
+  },
+  {
+    title: "Grön smoothie",
+    description: "Den är grön",
+    price: 49,
+    containsNuts: false,
+    containsEggs: false,
+    containsGluten: false,
+    type: "Dryck",
+    count: 0,
+    mealImage:
+      "https://cdn.pixabay.com/photo/2018/09/23/09/31/smoothie-3697014_960_720.jpg",
+  },
+  {
+    title: "Röd smoothie",
+    description: "Den är röd, inte grön",
+    price: 49,
+    containsNuts: false,
+    containsEggs: false,
+    containsGluten: false,
+    type: "Dryck",
+    count: 0,
+    mealImage:
+      "https://cdn.pixabay.com/photo/2018/03/12/21/37/fruit-3220970_960_720.jpg",
+  },
+  {
+    title: "Vatten",
+    description: "Blött",
+    price: 29,
+    containsNuts: false,
+    containsEggs: false,
+    containsGluten: false,
+    type: "Dryck",
+    count: 0,
+    mealImage:
+      "https://cdn.pixabay.com/photo/2017/05/15/17/43/water-2315559_960_720.jpg",
   },
 ];
 export default meals;
