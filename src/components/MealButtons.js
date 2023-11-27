@@ -15,12 +15,20 @@ export default function MealButtons({ index, mealsCount, changeMealCounter }) {
   };
   return (
     <div className="buttonContainer">
-      <button className="control__btn" onClick={decrease}>
+      <button
+        className="control__btn"
+        style={{ cursor: "pointer" }}
+        onClick={decrease}
+      >
         -
       </button>
       <span className="counter__output">{mealsCount}</span>
       {/* <span className="counter__output">{counter}</span> */}
-      <button className="control__btn" onClick={increase}>
+      <button
+        className="control__btn"
+        style={{ cursor: "pointer" }}
+        onClick={increase}
+      >
         +
       </button>
     </div>

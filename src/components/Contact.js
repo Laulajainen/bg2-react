@@ -1,3 +1,6 @@
+import ContentWrapper from "./ContentWrapper";
+import BackgroundCover from "./Background";
+
 const text = (
   <h6
     className="contact-content"
@@ -90,8 +93,9 @@ const url =
 
 function Maps() {
   return (
-    <div classname="click-maps" onClick={() => window.open(url, "_blank")}>
+    <div>
       <div
+        className="click-maps"
         style={{
           display: "flex",
           flexDirection: "row",
@@ -105,7 +109,11 @@ function Maps() {
       >
         <h6 className="contact-content">
           {" "}
-          <img src="./assets/map.JPG" style={{ width: "100%" }} />
+          <img
+            src="./assets/map.JPG"
+            onClick={() => window.open(url, "_blank")}
+            style={{ width: "100%", cursor: "pointer" }}
+          />
           <div
             style={{
               padding: "5vh",
@@ -116,8 +124,18 @@ function Maps() {
               fontSize: "21px",
             }}
           >
-            <div>Tucgatan 1</div>
-            <div>565 37 Linköping</div>
+            <div
+              onClick={() => window.open(url, "_blank")}
+              style={{ cursor: "pointer" }}
+            >
+              Tucgatan 1
+            </div>
+            <div
+              onClick={() => window.open(url, "_blank")}
+              style={{ cursor: "pointer" }}
+            >
+              565 37 Linköping
+            </div>
           </div>{" "}
         </h6>
       </div>
@@ -128,17 +146,7 @@ function Maps() {
 export default function Contact() {
   return (
     <>
-      <div
-        className="background_contact"
-        style={{
-          position: "relative",
-          display: "flex",
-          justifyContent: "center",
-          backgroundImage: "url(/assets/bgcontact.jpg)",
-          backgroundAttachment: "fixed",
-          backgroundSize: "cover",
-        }}
-      >
+      <ContentWrapper>
         <div
           className="contact_info"
           style={{
@@ -166,7 +174,7 @@ export default function Contact() {
                 display: "flex",
                 justifyContent: "center",
                 flexDirection: "column",
-                width: "100%",
+                width: "40em",
               }}
             >
               <div style={{ display: "flex", justifyContent: "center" }}>
@@ -189,20 +197,9 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      </div>
-      <div
-        style={{
-          position: "fixed" /* Sit on top of the page content */,
-          width: "100%" /* Full width (cover the whole page) */,
-          height: "100%" /* Full height (cover the whole page) */,
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          zindex: 2,
-          backgroundColor: "rgba(255,255,255,0.2)",
-        }}
-      ></div>
+
+        <BackgroundCover />
+      </ContentWrapper>
     </>
   );
 }
