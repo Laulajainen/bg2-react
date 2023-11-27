@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Footer from "./container/Footer/Footer";
 import MealObjects from "./components/MealObjects";
 import Start from "./components/Start";
+import Contact from "./components/Contact";
 import Meals from "./components/MealsList";
 import Contact from "./components/Contact";
 
@@ -23,7 +24,11 @@ const App = () => {
   return (
     <>
       <Navbar mealData={mealData} changeMealCounter={changeMealCounter} />
-      {/*<FoodCart mealData={mealData} changeMealCounter={changeMealCounter}/> Data och funktion går iväg*/}
+      {/* <FoodCart
+        mealData={mealData}
+        changeMealCounter={changeMealCounter}
+      />{" "} */}
+      {/*Data och funktion går iväg*/}
       <div className="container">
         {
           <Routes>

@@ -8,6 +8,10 @@
   padding-top: 10px;
   background: rgba(226, 223, 223, 0.7);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  top: 0;
+  z-index: 10;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
 }
 
 .navbar_logo {
