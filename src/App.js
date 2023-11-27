@@ -6,7 +6,9 @@ import Footer from "./container/Footer/Footer";
 import MealObjects from "./components/MealObjects";
 import FoodCart from "./components/FoodCart";
 import Start from "./components/Start";
+
 import Contact from "./components/Contact";
+
 import Meals from "./components/MealsList";
 
 import { Route, Routes } from "react-router-dom";
@@ -23,17 +25,16 @@ const App = () => {
 
   return (
     <>
-      <Navbar />
-      <FoodCart
+      <Navbar mealData={mealData} changeMealCounter={changeMealCounter} />
+      {/* <FoodCart
         mealData={mealData}
         changeMealCounter={changeMealCounter}
-      />{" "}
+      />{" "} */}
       {/*Data och funktion går iväg*/}
       <div className="container">
         {
           <Routes>
             <Route path="" element={<Start />} />
-
             <Route path="/contact" element={<Contact />} />
             <Route
               path="/menu"
