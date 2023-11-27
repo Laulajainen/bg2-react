@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ContentWrapper from "./ContentWrapper";
-import BackgroundCover from "./Background";
 
 export default function Start() {
   // const [scrollPosition, setScrollPosition] = useState(0);
@@ -90,13 +88,33 @@ export default function Start() {
   }
 
   return (
-    <ContentWrapper>
+    <div
+      id="startWrapper"
+      style={{
+        backgroundImage: "url(/img/start_bg.jpg)",
+        //backgroundImage: scrollPosition > 800 ? 'url(/img/start_bg.jpg)' : 'url(/img/bgcontact.jpg)',
+        //transition: "backgroundImage 0.5s ease",
+        backgroundAttachment: "fixed",
+        backgroundSize: "cover",
+      }}
+    >
       <Video />
       <div id="startTextWrapper">
         <TextSection />
       </div>
-
-      <BackgroundCover />
-    </ContentWrapper>
+      <div
+        style={{
+          position: "fixed" /* Sit on top of the page content */,
+          width: "100%" /* Full width (cover the whole page) */,
+          height: "100%" /* Full height (cover the whole page) */,
+          top: 0,
+          left: 0,
+          right: 0,
+          bottom: 0,
+          zindex: 2,
+          backgroundColor: "rgba(255,255,255,0.2)",
+        }}
+      ></div>
+    </div>
   );
 }

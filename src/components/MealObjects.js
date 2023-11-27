@@ -1,7 +1,7 @@
 import { React } from "react";
 import MealButtons from "./MealButtons";
 import ContentWrapper from "./ContentWrapper";
-import BackgroundCover from "./Background";
+import BackgroundCover from "./BackgroundCover";
 
 export default function MealsObjects({ mealData, changeMealCounter }) {
   return (

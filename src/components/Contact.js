@@ -90,7 +90,7 @@ const url =
 
 function Maps() {
   return (
-    <div classname="click-maps" onClick={() => window.open(url, "_blank")}>
+    <div className="click-maps" onClick={() => window.open(url, "_blank")}>
       <div
         style={{
           display: "flex",

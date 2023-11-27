@@ -6,6 +6,7 @@ import Footer from "./container/Footer/Footer";
 import MealObjects from "./components/MealObjects";
 import FoodCart from "./components/FoodCart";
 import Start from "./components/Start";
+import Contact from "./components/Contact";
 import Meals from "./components/MealsList";
 import Contact from "./components/Contact";
 
@@ -38,7 +39,7 @@ const App = () => {
                 />
               }
             />
-            <Route path="/contact" element={<Contact />} />
+            {/* <Route path="Kontakt" element={<Contact />} /> */}
             {/* <Route path="Kundkorg" element={<FoodCart />} /> */}
           </Routes>
         }

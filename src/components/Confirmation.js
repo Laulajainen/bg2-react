@@ -115,7 +115,7 @@ export default function Confirmation(meals) {
   ];
 
   return (
-    <ContentWrapper>
+    <ConfirmWrapper>
       <div
         style={{
           display: "flex",
@@ -128,7 +128,7 @@ export default function Confirmation(meals) {
         <ConfirmationText meals={meals} />
       </div>
       <BackgroundCover />
-    </ContentWrapper>
+    </ConfirmWrapper>
   );
 }
 
