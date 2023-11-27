@@ -49,7 +49,6 @@ export default function MealsObjects({ mealData, changeMealCounter }) {
                 />
               </div>
             </div>
-            </div>
           );
         })}
       </div>
