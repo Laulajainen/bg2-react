@@ -1,19 +1,36 @@
+import React, { useState, useEffect } from 'react';
+
 export default function Start() {
 
-    const textContent = (
-        <p className="startText" style={{ margin: "5vh", padding: "2em", maxWidth: "40em", 
-        backgroundColor: "rgba(255,255,255,0.5)", fontSize: "21px", zIndex: 1, backdropFilter: "blur(4px)" }}>
-            Consectetur officia nisi voluptate adipisicing cillum magna officia sint duis Lorem.
-            Eu dolor nostrud aliqua ullamco ad Lorem. Reprehenderit fugiat incididunt mollit nostrud ullamco aliquip
-            Lorem quis laboris in aute mollit. Cillum qui deserunt velit quis reprehenderit deserunt labore. Laboris
-            officia esse officia culpa laboris Lorem Lorem laboris exercitation. Eit veniam culpa aute culpa sunt ad
-            officia dolore aute reprehenderit non nostrud cillum.
-            Consectetur officia nisi voluptate adipisicing cillum magna officia sint duis Lorem.
-            Eu dolor nostrud aliqua ullamco ad Lorem. Reprehenderit fugiat incididunt mollit nostrud ullamco aliquip
-            Lorem quis laboris in aute mollit. Cillum qui deserunt velit quis reprehenderit deserunt labore. Laboris
-            officia esse officia culpa laboris Lorem Lorem laboris exercitation. Eit veniam culpa aute culpa sunt ad
-            officia dolore aute reprehenderit non nostrud cillum.
-        </p>
+  // const [scrollPosition, setScrollPosition] = useState(0);
+
+  // function handleScroll() {
+  //   const position = window.scrollY;
+  //   console.log(position);
+  //   setScrollPosition(position);
+  // };
+
+  // useEffect(() => {
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
+
+  const textContent = (
+      <p className="startText" style={{ margin: "5vh", padding: "2em", maxWidth: "40em", 
+      backgroundColor: "rgba(255,255,255,0.5)", fontSize: "21px", zIndex: 1, backdropFilter: "blur(4px)" }}>
+          Consectetur officia nisi voluptate adipisicing cillum magna officia sint duis Lorem.
+          Eu dolor nostrud aliqua ullamco ad Lorem. Reprehenderit fugiat incididunt mollit nostrud ullamco aliquip
+          Lorem quis laboris in aute mollit. Cillum qui deserunt velit quis reprehenderit deserunt labore. Laboris
+          officia esse officia culpa laboris Lorem Lorem laboris exercitation. Eit veniam culpa aute culpa sunt ad
+          officia dolore aute reprehenderit non nostrud cillum.
+          Consectetur officia nisi voluptate adipisicing cillum magna officia sint duis Lorem.
+          Eu dolor nostrud aliqua ullamco ad Lorem. Reprehenderit fugiat incididunt mollit nostrud ullamco aliquip
+          Lorem quis laboris in aute mollit. Cillum qui deserunt velit quis reprehenderit deserunt labore. Laboris
+          officia esse officia culpa laboris Lorem Lorem laboris exercitation. Eit veniam culpa aute culpa sunt ad
+          officia dolore aute reprehenderit non nostrud cillum.
+      </p>
     );
 
     const textArray = [textContent, textContent, textContent]
@@ -55,8 +72,12 @@ export default function Start() {
     return (
         <div id="startWrapper" style={{ 
             backgroundImage: 'url(/img/start_bg.jpg)',
+            //backgroundImage: scrollPosition > 800 ? 'url(/img/start_bg.jpg)' : 'url(/img/bgcontact.jpg)',
+            //transition: "backgroundImage 0.5s ease",
             backgroundAttachment: "fixed", 
-            backgroundSize: "cover"}}>
+            backgroundSize: "cover",
+          }}
+            >
             <Video />
             <div id="startTextWrapper">
                 <TextSection />

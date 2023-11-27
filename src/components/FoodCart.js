@@ -1,15 +1,16 @@
 import React from "react";
 import MealButtons from "./MealButtons";
-export default function Foodcart(props) {
+
+export default function Foodcart({ mealData, changeMealCounter }) {
   return (
     <div id="meals">
-      {props.meals.map((props, index) => {
+      {mealData.map((meal, index) => {
         return (
-          <div key={index} id={props.title} className="mealBoxes">
-            <h3>{props.title}</h3>
-            <h4 className="mealPrices">{props.price + "kr"}</h4>
+          <div key={index} id={meal.title} className="mealBoxes">
+            <h3>{meal.title}</h3>
+            <h4 className="mealPrices">{meal.price + "kr"}</h4>
             <div className="buttonContainer">
-              <MealButtons mealsCount={props.count} />
+              <MealButtons index={index} mealsCount={meal.count} changeMealCounter={changeMealCounter} />
             </div>
           </div>
         );
