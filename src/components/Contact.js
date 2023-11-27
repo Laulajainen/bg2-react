@@ -1,5 +1,3 @@
-import GoogleMap from "./Maps";
-
 const text = (
   <h6
     className="contact-content"
