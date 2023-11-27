@@ -2,21 +2,15 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  max-width: 50em;
-  justify-content: center;
-  z-index: 3;
 }
 #meals .mealBoxes {
   width: 250px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  text-align: center;
   flex-direction: column;
-  z-index: 3;
+  border-style: solid;
   border-radius: 5%;
-  margin: 10px;
-  background-color: rgba(255, 255, 255, 0.5);
   border-color: bisque;
 }
 #meals .mealBoxes .allergyContainer {
@@ -31,9 +25,6 @@
 #meals .mealBoxes .buttonContainer {
   display: flex;
   flex-direction: row;
-  margin: 5px;
-  width: 5em;
-  justify-content: space-around;
 }
 #meals .mealBoxes .mealImages {
   width: 200px;
@@ -61,6 +52,11 @@
      object-fit: cover;
 }
 
+#confirmation {
+  max-width: 50em;
+  justify-content: center;
+  z-index: 3;
+}
 #confirmation .confirmationAlign {
   display: flex;
   flex: 1;
@@ -107,16 +103,25 @@
 }
 .navbar .homelinkul {
   flex: 1;
+  text-align: center;
+  flex-direction: column;
+  z-index: 3;
+  border-radius: 5%;
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-color: bisque;
+}
+.navbar .homelinkul .allergyContainer {
   display: flex;
   justify-content: center;
   list-style: none;
   padding-right: 80px;
 }
-.navbar .homelinkul li {
+.navbar .homelinkul .allergyContainer li {
   cursor: pointer;
   text-decoration: none;
 }
-.navbar .homelinkul a {
+.navbar .homelinkul .allergyContainer a {
   display: flex;
   text-decoration: none;
   color: #000;
@@ -129,19 +134,19 @@
   line-height: normal;
   letter-spacing: 0.8px;
 }
-.navbar .navbar-links-to-right {
+.navbar .homelinkul .navbar-links-to-right {
   display: inline-flex;
   padding: 10px;
   text-decoration: none;
   list-style: none;
 }
-.navbar .navbar-links-to-right li {
+.navbar .homelinkul .navbar-links-to-right li {
   margin: 0 1rem;
   border-radius: 30px;
   background: rgba(197, 110, 51, 0.7);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.navbar .navbar-links-to-right a {
+.navbar .homelinkul .navbar-links-to-right a {
   padding: 10px;
   color: #000;
   text-align: center;
@@ -150,12 +155,21 @@
   font-style: normal;
   text-decoration: none;
 }
-.navbar li :hover {
+.navbar .homelinkul .navbar-links-to-right .buttonContainer {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+  width: 5em;
+  justify-content: space-around;
+}
+.navbar .homelinkul .navbar-links-to-right li :hover {
   text-decoration: underline;
   color: #2563eb;
 }
-
-.wrapper {
+.navbar .homelinkul .navbar-links-to-right .control_btn {
+  width: 10vw;
+}
+.navbar .wrapper {
   position: relative;
   background-image: url("../public/img/start_bg.jpg");
   background-attachment: fixed;
@@ -164,8 +178,7 @@
   min-height: 100vh;
   overflow-y: auto;
 }
-
-.background {
+.navbar .background {
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -176,8 +189,4 @@
   z-index: 1;
   overflow-y: auto;
   background-color: rgba(255, 255, 255, 0.2);
-
-.mealBoxes .control_btn {
-  width: 10vw;
-
 }/*# sourceMappingURL=styles.css.map */
