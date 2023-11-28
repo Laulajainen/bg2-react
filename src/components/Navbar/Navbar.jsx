@@ -5,23 +5,14 @@ import { TiShoppingCart } from "react-icons/ti";
 
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import Foodcart from "../FoodCart";
+import Sidebar from "../Sidebar/Sidebar";
 
 const Navbar = ({ mealData, changeMealCounter }) => {
-  function CartButton({ mealData, changeMealCounter }) {
-    const [show, setShow] = useState(true);
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
 
-    return (
-      <div>
-        <button className="cartbutton" onClick={() => setShow(!show)}>
-          <TiShoppingCart />
-        </button>
-        {show ? (
-          <Foodcart mealData={mealData} changeMealCounter={changeMealCounter} />
-        ) : null}
-      </div>
-    );
-  }
+  const toggleSidebar = () => {
+    setSidebarOpen(!isSidebarOpen);
+  };
 
   return (
     <nav className="navbar">
@@ -38,14 +29,18 @@ const Navbar = ({ mealData, changeMealCounter }) => {
         <li className="contactlink">
           <Link to="/contact">Kontakt</Link>
         </li>
-        <CartButton
-          className="cartbutton"
+        <li className="cartbutton" onClick={toggleSidebar}>
+          <TiShoppingCart />
+        </li>
+      </ul>
+      {isSidebarOpen && (
+        <Sidebar
+          show={isSidebarOpen}
           mealData={mealData}
           changeMealCounter={changeMealCounter}
-        ></CartButton>
-      </ul>
+        />
+      )}
     </nav>
   );
 };
-
 export default Navbar;
