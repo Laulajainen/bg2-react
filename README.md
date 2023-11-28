@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+----------**Bistro.Net**----------
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Hej och välkomna till vårat projekt Bistro.Net!
 
-## Available Scripts
+Det här projektet är en hemsida skapad i react för en fiktiv restaurang.
+Hemsidan består av 4 olika vyer med olika funktioner.
 
-In the project directory, you can run:
+**Start**
 
-### `npm start`
+Start är det som ska fånga intresset för restaurangen, den har en video som körs i bakgrunden som slumpas varje gång man besöker hemsidan. Det finns även introducerande texter om restaurangen när man scrollar nedåt.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Kontakt**
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Kontaktsidan är där du hittar alla kontaktuppgifter du kan behöva för att kontakta restaurangen. Det finns även en liten karta på adressen och trycker man på den så öppnas google maps färdigt ifylld med adressen.
 
-### `npm test`
+**Menyn**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Här du kan bläddra bland allt som finns att erbjuda samt lägga till det som du vill beställa i din kundkorg, det man väljer härifrån populeras i kundkorgen. Det finns även bilder på allergener som visas på varje maträtt som även har extra info om vad det är när man hovrar över med muspekaren.
 
-### `npm run build`
+**Kundkorgen**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Kundkorgen är inte riktig en egen sida eller vy, kundkorgen kommer upp som ett eget element när man trycker på kundkorgsknappen i navigationsfältet på headern och den går att nå från alla sidor. Kundkorgen populeras av rätter som man har valt i menysidan och från kundkorgen kan man ta sig till bekräftelsesidan/kassan för att beställa sin mat.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**Bekräftelsesidan**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Här får du din bekräftelse på beställningen med kvitto på vad du har beställt och hur mycket det kostat.
 
-### `npm run eject`
+**Komponenter**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Tillgänglighetsanpassning**
