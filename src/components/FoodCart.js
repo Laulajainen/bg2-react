@@ -1,6 +1,6 @@
 import React from "react";
 import MealButtons from "./MealButtons";
-
+// Det här är kundkorgen som renderas när en måltid är lagd i kundkorg samt att kundkorgsknappen är klickad.
 export default function Foodcart({ mealData, changeMealCounter }) {
   return (
     <div id="meals">
