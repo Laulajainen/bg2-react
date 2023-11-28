@@ -7,8 +7,8 @@ import MealObjects from "./components/MealObjects";
 import Start from "./components/Start";
 import Contact from "./components/Contact";
 import Meals from "./components/MealsList";
-
 import { Route, Routes } from "react-router-dom";
+import Confirmation from "./components/Confirmation";
 
 const App = () => {
   const [mealData, setMealData] = useState(Meals); //App är förälder till både kundkorg och menysidan, alltså lägger vi datan här.
@@ -23,20 +23,22 @@ const App = () => {
   return (
     <>
       <Navbar mealData={mealData} changeMealCounter={changeMealCounter} />
-      {/* <FoodCart
-        mealData={mealData}
-        changeMealCounter={changeMealCounter}
-      />{" "} */}
-      {/*Data och funktion går iväg*/}
+
       <div className="container">
         {
           <Routes>
             <Route path="" element={<Start />} />
             <Route
               path="/menu"
-              element={<MealObjects mealData={mealData} changeMealCounter={changeMealCounter} />}
+              element={
+                <MealObjects
+                  mealData={mealData}
+                  changeMealCounter={changeMealCounter}
+                />
+              }
             />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/confirmation" element={<Confirmation />} />
           </Routes>
         }
       </div>

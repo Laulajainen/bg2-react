@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  max-width: 50em;
+  max-width: 110em;
   justify-content: center;
   z-index: 3;
 }
@@ -55,6 +55,37 @@
 }
 #meals .mealBoxes .control_btn {
   width: 10vw;
+}
+
+#cartmeals .cartmealBoxes {
+  width: 17em;
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  text-align: center;
+  border-style: solid;
+  border-radius: 5%;
+  border-color: bisque;
+  margin: 0.5em;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+#cartmeals .cartmealBoxes .cartbuttonContainer {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 5px;
+  width: 5em;
+  justify-content: space-around;
+  z-index: 1;
+}
+#cartmeals .cartmealBoxes .cartbuttonContainer .counter__output {
+  margin: 0.5em;
+  border-radius: 15%;
+  border-style: solid;
+  border-width: 2px;
+  background-color: white;
+  display: inline-block;
+  width: 1em;
 }
 
 #start .textBlockHolder .startTextBlock {
