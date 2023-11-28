@@ -1,5 +1,5 @@
 // Array av objekt med alla måltider och all info om dom.
-const meals = [
+const mealsList = [
   {
     title: "Laxen",
     description: "Död fisk",
@@ -111,4 +111,4 @@ const meals = [
     mealImage: "https://cdn.pixabay.com/photo/2017/05/15/17/43/water-2315559_960_720.jpg",
   },
 ];
-export default meals;
+export default mealsList;
