@@ -164,11 +164,11 @@
 
 #confirmation .confirmationAlign {
   display: flex;
+  width: 100%;
   flex: 1;
   flex-grow: 1;
   justify-content: center;
   align-content: center;
-  max-width: 50em;
   justify-content: center;
   z-index: 3;
 }
@@ -188,8 +188,14 @@
 #confirmation .confirmationAlign .confirmationMessage .tableContainer {
   display: flex;
   justify-content: center;
+  overflow-x: hidden;
 }
-#confirmation .confirmationAlign .confirmationMessage .tableContainer #sumCell {
+#confirmation .confirmationAlign .confirmationMessage .tableContainer table {
+  width: 100%;
+  max-width: 100%;
+  white-space: nowrap;
+}
+#confirmation .confirmationAlign .confirmationMessage .tableContainer table #sumCell {
   text-align: right;
   border-top: 1px solid;
 }
