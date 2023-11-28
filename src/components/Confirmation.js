@@ -1,20 +1,21 @@
 import ContentWrapper from "./ContentWrapper";
-import BackgroundCover from "./Background";
+import BackgroundCover from "./BackgroundCover";
 
 function ListedItems({ result }) {
-  return Object.entries(result).map(([key, value]) => {
-    const amount = value.length > 0 ? value.length + " x " : "";
-    const price = value[0].cost * value.length;
+  
+  return  result.map((item) => {
+    const amount = item.count > 0 ? item.count + " x " : "";
+    const price = item.price * item.count;
 
     return (
-      <tr>
-        <td key={key + amount} style={{ textAlign: "right" }}>
+      <tr key={item.title}>
+        <td style={{ textAlign: "right" }}>
           {amount}
         </td>
-        <td key={key} style={{ textAlign: "left" }}>
-          {key}
+        <td style={{ textAlign: "left" }}>
+          {item.title}
         </td>
-        <td key={key + price} style={{ textAlign: "right" }}>
+        <td style={{ textAlign: "right" }}>
           {price} kr
         </td>
       </tr>
@@ -22,36 +23,30 @@ function ListedItems({ result }) {
   });
 }
 
-function ConfirmationText({ meals }) {
-  const result = sortItems(meals);
+function ConfirmationText({ mealData }) {
+  var shortList = [];
+  mealData.forEach(item => {
+    (item.count > 0) && shortList.push(item);
+  })
+  const result = sortItems(shortList);
+
   return (
     <section
-      className="startText"
-      style={{
-        maxheight: "fitcontent",
-        margin: "5vh",
-        padding: "2em",
-        maxWidth: "20em",
-        backgroundColor: "rgba(255,255,255,0.5)",
-        fontSize: "21px",
-        zIndex: 1,
-        backdropFilter: "blur(4px)",
-        textAlign: "center",
-      }}
+      className="confirmationMessage"
     >
       <h2>Tack för din beställning!</h2>
 
       <h4>Det här är din order:</h4>
 
-      <div style={{ display: "flex", justifyContent: "center" }}>
+      <div className="tableContainer">
         <table>
           <tbody>
             <ListedItems result={result} />
             <tr>
               <td></td>
               <td></td>
-              <td style={{ textAlign: "right", borderTop: "1px solid" }}>
-                {getTotal(meals)} kr
+              <td id="sumCell">
+                {getTotal(mealData)} kr
               </td>
             </tr>
           </tbody>
@@ -66,8 +61,8 @@ function ConfirmationText({ meals }) {
   );
 }
 
-export default function Confirmation(meals) {
-  meals = [
+export default function Confirmation( mealData ) {
+  mealData = [
     {
       title: "Kycklingspett",
       description: "Detta är gott pga. nötter",
@@ -75,18 +70,8 @@ export default function Confirmation(meals) {
       containsEggs: false,
       containsGluten: false,
       type: "Huvudrätt",
-      cost: 100,
-      mealImage:
-        "https://cdn.pixabay.com/photo/2018/08/14/07/16/satay-chicken-3604856_960_720.jpg",
-    },
-    {
-      title: "Kycklingspett",
-      description: "Detta är gott pga. nötter",
-      containsNuts: true,
-      containsEggs: false,
-      containsGluten: false,
-      type: "Huvudrätt",
-      cost: 100,
+      price: 100,
+      count: 2,
       mealImage:
         "https://cdn.pixabay.com/photo/2018/08/14/07/16/satay-chicken-3604856_960_720.jpg",
     },
@@ -97,9 +82,34 @@ export default function Confirmation(meals) {
       containsEggs: false,
       containsGluten: false,
       type: "Tillbehör",
-      cost: 50,
+      price: 50,
+      count: 1,
       mealImage:
         "https://cdn.pixabay.com/photo/2018/01/04/11/47/food-3060473_960_720.jpg",
+    },
+    {
+      title: "Kebabspett",
+      description: "Sams favorit",
+      price: 99,
+      containsNuts: false,
+      containsEggs: false,
+      containsGluten: true,
+      type: "Huvudrätt",
+      count: 0,
+      mealImage:
+        "https://cdn.pixabay.com/photo/2018/05/03/05/19/skewer-3370443_960_720.jpg",
+    },
+    {
+      title: "Grillbrickan",
+      description: "Den tar aldrig slut... aldrig!",
+      price: 99,
+      containsNuts: false,
+      containsEggs: true,
+      containsGluten: true,
+      type: "Huvudrätt",
+      count: 1,
+      mealImage:
+        "https://cdn.pixabay.com/photo/2017/01/15/14/26/barbeque-1981640_960_720.jpg",
     },
     {
       title: "Mineralvatten",
@@ -108,32 +118,28 @@ export default function Confirmation(meals) {
       containsEggs: false,
       containsGluten: false,
       type: "Dryck",
-      cost: 15,
+      price: 15,
+      count: 3,
       mealImage:
         "https://cdn.pixabay.com/photo/2016/07/21/11/17/drink-1532300_960_720.jpg",
     },
   ];
 
   return (
-    <ConfirmWrapper>
-      <div
-        style={{
-          display: "flex",
-          flex: 1,
-          flexGrow: 1,
-          justifyContent: "center",
-          alignContent: "center",
-        }}
-      >
-        <ConfirmationText meals={meals} />
+    <div id="confirmation">
+      <ContentWrapper>
+        <div className="confirmationAlign">
+          <ConfirmationText mealData={mealData} />
+        </div>
+        <BackgroundCover />
+      </ContentWrapper>
       </div>
-      <BackgroundCover />
-    </ConfirmWrapper>
   );
 }
 
-function sortItems(meals) {
-  meals.sort((a, b) => {
+function sortItems(result) {
+
+  result.sort((a, b) => {
     const typeA = a.type.toUpperCase();
     const typeB = b.type.toUpperCase();
     if (typeA < typeB) {
@@ -144,13 +150,13 @@ function sortItems(meals) {
     }
     return 0; //Om inget av ovan så är de lika.
   });
-  return Object.groupBy(meals, ({ title }) => title);
+  return result;
 }
 
-function getTotal(meals) {
+function getTotal(mealData) {
   let totalSum = 0;
-  meals.forEach((item) => {
-    totalSum += item.cost;
+  mealData.forEach((item) => {
+    totalSum += item.price;
   });
   return totalSum;
 }

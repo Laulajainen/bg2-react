@@ -137,11 +137,11 @@
 #confirmation {
   .confirmationAlign {
     display: flex;
+    width: 100%;
     flex: 1;
     flex-grow: 1;
     justify-content: center;
     align-content: center;
-    max-width: 50em;
     justify-content: center;
     z-index: 3;
 
@@ -159,10 +159,17 @@
       .tableContainer {
         display: flex;
         justify-content: center;
+        overflow-x: hidden;
+        
+        table {
+          width: 100%;
+          max-width: 100%;
+          white-space: nowrap;
 
-        #sumCell {
-          text-align: right;
-          border-top: 1px solid;
+          #sumCell {
+            text-align: right;
+            border-top: 1px solid;
+          }
         }
       }
     }
