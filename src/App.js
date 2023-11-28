@@ -8,6 +8,7 @@ import Start from "./components/Start";
 import Contact from "./components/Contact";
 import Meals from "./components/MealsList";
 import { Route, Routes } from "react-router-dom";
+import Confirmation from "./components/Confirmation";
 
 const App = () => {
   const [mealData, setMealData] = useState(Meals); //App är förälder till både kundkorg och menysidan, alltså lägger vi datan här.
@@ -37,6 +38,7 @@ const App = () => {
               }
             />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/confirmation" element={<Confirmation />} />
           </Routes>
         }
       </div>
