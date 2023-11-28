@@ -1,3 +1,5 @@
+import { useHistory } from "react-router-dom";
+
 import "./Sidebar.css";
 import Foodcart from "../FoodCart";
 import { useState } from "react";
@@ -8,6 +10,8 @@ export default function Sidebar({ show, mealData, changeMealCounter }) {
   const handleConfirm = () => {
     // Add your logic for handling confirmation here
     console.log("Confirm button clicked!");
+
+    setMeals([]);
   };
 
   return (
