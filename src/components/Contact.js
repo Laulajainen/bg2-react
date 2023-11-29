@@ -26,27 +26,28 @@ const url =
 function Maps() {
   return (
     <div className="click-maps">
-      <h6 className="contact-content">
+      <div className="contact-content">
         {" "}
         <img
           src="./assets/map.JPG"
+          alt="map"
           onClick={() => window.open(url, "_blank")}
         />
         <div>
-          <div
+          <h6
             onClick={() => window.open(url, "_blank")}
             style={{ cursor: "pointer" }}
           >
             Tucgatan 1
-          </div>
-          <div
+          </h6>
+          <h6
             onClick={() => window.open(url, "_blank")}
             style={{ cursor: "pointer" }}
           >
             565 37 Linköping
-          </div>
+          </h6>
         </div>{" "}
-      </h6>
+      </div>
     </div>
   );
 }
