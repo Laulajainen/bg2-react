@@ -16,7 +16,7 @@ const App = () => {
   const navigate = useNavigate();
 
   function changeMealCounter(index, modifier) { //Ändrar värdet på .count hos index för föremålet som knappen som hör till.
-    setMealData(prevMealData => {
+
       const tempMeals = [...prevMealData];
       tempMeals[index] = { ...tempMeals[index], count: tempMeals[index].count + modifier };
       return tempMeals;
@@ -31,15 +31,22 @@ const App = () => {
 
   return (
     <>
+
       <Navbar mealData={mealData} changeMealCounter={changeMealCounter} confirmOrder={confirmOrder}/> 
 
       <div className="container"> 
         {
           <Routes>
             <Route path="" element={<Start />} />
-            <Route path="/menu" element={<MealObjects mealData={mealData} changeMealCounter={changeMealCounter}/>} />
+            <Route
+              path="/menu"
+              element={<MealObjects mealData={mealData} changeMealCounter={changeMealCounter} />}
+            />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/confirmation" element={<Confirmation confirmedItems={confirmedItems}/>} />
+            <Route
+              path="/confirmation"
+              element={<Confirmation confirmedItems={confirmedItems} />}
+            />
           </Routes>
         }
       </div>

@@ -3,7 +3,7 @@ const mealsList = [
   {
     title: "Laxen",
     description: "Död fisk",
-    price: 129,
+    price: 169,
     containsNuts: false,
     containsEggs: true,
     containsGluten: false,
@@ -14,7 +14,7 @@ const mealsList = [
   {
     title: "Grillbrickan",
     description: "Den tar aldrig slut... aldrig!",
-    price: 99,
+    price: 699,
     containsNuts: false,
     containsEggs: true,
     containsGluten: true,
@@ -25,7 +25,7 @@ const mealsList = [
   {
     title: "Tacos",
     description: "Bettans bästa",
-    price: 99,
+    price: 199,
     containsNuts: false,
     containsEggs: true,
     containsGluten: true,
@@ -36,7 +36,7 @@ const mealsList = [
   {
     title: "Kebabspett",
     description: "Sams favorit",
-    price: 99,
+    price: 299,
     containsNuts: false,
     containsEggs: false,
     containsGluten: true,
@@ -47,7 +47,7 @@ const mealsList = [
   {
     title: "Kycklingspett",
     description: "Detta är gott pga. nötter",
-    price: 99,
+    price: 199,
     containsNuts: true,
     containsEggs: true,
     containsGluten: false,
@@ -102,7 +102,7 @@ const mealsList = [
   {
     title: "Vatten",
     description: "Blött",
-    price: 29,
+    price: 69,
     containsNuts: false,
     containsEggs: false,
     containsGluten: false,
