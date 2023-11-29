@@ -1,6 +1,5 @@
 import React from "react";
 import images from "../../constants/images";
-import "./Navbar.css";
 import { TiShoppingCart } from "react-icons/ti";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -14,8 +13,9 @@ const Navbar = ({ mealData, changeMealCounter, confirmOrder }) => {
     setSidebarOpen(!isSidebarOpen);
   };
 
-  useEffect(() => { // This will be triggered when mealData changes for the first time
-    if (firstItemAdded == false) {
+  useEffect(() => {
+    // This will be triggered when mealData changes for the first time
+    if (firstItemAdded == true) {
       setSidebarOpen(true);
       setFirstItemAdded(true);
     }

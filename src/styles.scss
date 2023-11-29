@@ -20,6 +20,7 @@
     margin: 1em;
     background-color: rgba(255, 255, 255, 0.5);
     .allergyContainer {
+      z-index: 1;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -28,6 +29,7 @@
       .allergyContent {
         margin: 5px;
         border-radius: 15%;
+        opacity: 70%;
       }
 
       img {
@@ -66,7 +68,6 @@
     justify-content: center;
     justify-content: space-around;
     text-align: center;
-    //flex-direction: column;
     border-style: solid;
     border-radius: 5%;
     border-color: bisque;
@@ -194,7 +195,7 @@
         display: flex;
         justify-content: center;
         overflow-x: hidden;
-        
+
         table {
           width: 100%;
           max-width: 100%;
@@ -216,7 +217,6 @@
   z-index: 3;
   justify-content: space-around;
   align-items: center;
-
   position: sticky;
   padding-top: 10px;
   background: rgba(226, 223, 223, 0.7);
@@ -229,18 +229,6 @@
     display: flex;
     justify-content: flex-start;
   }
-  .homelinkul {
-    flex: 1;
-
-    text-align: center;
-    flex-direction: column;
-    z-index: 3;
-    border-radius: 5%;
-    margin: 10px;
-    background-color: rgba(255, 255, 255, 0.5);
-
-    border-color: bisque;
-
     li {
       cursor: pointer;
       text-decoration: none;
@@ -274,22 +262,49 @@
       box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     }
     a {
-      padding: 10px;
       color: #000;
       text-align: center;
       font-family: Inter;
       font-size: 30px;
       font-style: normal;
       text-decoration: none;
+      padding: 2px;
+      border-radius: 30px;
     }
     li :hover {
       text-decoration: underline;
-      color: #2563eb;
+      // color: #2563eb;
+      background-color: bisque;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+    .cartbutton {
+      padding: 0px;
+      color: #000;
+      text-align: center;
+      font-family: Inter;
+      font-size: 24px;
+      font-style: normal;
+      text-decoration: none;
+      border-radius: 30px;
+      svg {
+        width: 36px;
+        height: 36px;
+        border-radius: 30px;
+      }
+    }
+
+    .cartbutton :hover {
+      background-color: bisque;
+      cursor: pointer;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+    .navbar-links-to-right li :hover {
+      background-color: bisque;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     }
   }
 }
 
-/*# sourceMappingURL=Footer.css.map */
 .footer {
   width: 100%;
   position: relative;
