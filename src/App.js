@@ -2,7 +2,7 @@ import "./App.css";
 import "./styles.css";
 import React, { useState, useEffect } from "react";
 import Navbar from "./components/Navbar/Navbar";
-import Footer from "./container/Footer/Footer";
+import Footer from "./components/Footer/Footer";
 import MealObjects from "./components/MealObjects";
 import Start from "./components/Start";
 import Contact from "./components/Contact";

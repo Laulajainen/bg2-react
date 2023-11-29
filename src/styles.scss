@@ -61,39 +61,6 @@
     }
   }
 }
-#cartmeals {
-  .cartmealBoxes {
-    width: 17em;
-    display: flex;
-    justify-content: center;
-    justify-content: space-around;
-    text-align: center;
-    border-style: solid;
-    border-radius: 5%;
-    border-color: bisque;
-    margin: 0.5em;
-    background-color: rgba(255, 255, 255, 0.7);
-    .cartbuttonContainer {
-      display: flex;
-      align-items: center;
-      flex-direction: row;
-      margin: 5px;
-      width: 5em;
-      justify-content: space-around;
-      z-index: 1;
-
-      .counter__output {
-        margin: 0.5em;
-        border-radius: 15%;
-        border-style: solid;
-        border-width: 2px;
-        background-color: white;
-        display: inline-block;
-        width: 1em;
-      }
-    }
-  }
-}
 #start {
   .textBlockHolder {
     .startTextBlock {
@@ -245,114 +212,72 @@
     line-height: normal;
     letter-spacing: 0.8px;
   }
-}
-
-.navbar-links-to-right {
-  display: inline-flex;
-  padding: 10px;
-  text-decoration: none;
-  list-style: none;
-
-  li {
-    max-height: 36px;
-    margin: 0 1rem;
-    border-radius: 30px;
-    background: rgba(197, 110, 51, 0.7);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  }
-  a {
-    color: #000;
-    text-align: center;
-    font-family: Inter;
-    font-size: 26px;
-    font-style: normal;
+  .navbar-links-to-right {
+    display: inline-flex;
+    padding: 10px;
     text-decoration: none;
-    padding: 2px;
-    border-radius: 30px;
-  }
-  li :hover {
-    text-decoration: underline;
-    // color: #2563eb;
-    background-color: bisque;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  }
-  .cartbutton {
-    padding: 0px;
-    color: #000;
-    text-align: center;
-    font-family: Inter;
-    font-size: 24px;
-    font-style: normal;
-    text-decoration: none;
-    border-radius: 30px;
-    svg {
-      width: 36px;
-      height: 36px;
+    list-style: none;
+
+    li {
+      max-height: 36px;
+      margin: 0 1rem;
+      border-radius: 30px;
+      background: rgba(197, 110, 51, 0.7);
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+    a {
+      color: #000;
+      text-align: center;
+      font-family: Inter;
+      font-size: 26px;
+      font-style: normal;
+      text-decoration: none;
+      padding: 2px;
       border-radius: 30px;
     }
-  }
-
-  .cartbutton :hover {
-    background-color: bisque;
-    cursor: pointer;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  }
-  .navbar-links-to-right li :hover {
-    background-color: bisque;
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  }
-
-  @media only screen and (max-width: 768px) {
-    .navbar a {
-      font-size: 20px;
+    li :hover {
+      text-decoration: underline;
+      // color: #2563eb;
+      background-color: bisque;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+    .cartbutton {
+      padding: 0px;
+      color: #000;
+      text-align: center;
+      font-family: Inter;
+      font-size: 24px;
+      font-style: normal;
+      text-decoration: none;
+      border-radius: 30px;
+      svg {
+        width: 36px;
+        height: 36px;
+        border-radius: 30px;
+      }
     }
 
-    .navbar_logo img {
-      max-width: 80px;
+    .cartbutton :hover {
+      background-color: bisque;
+      cursor: pointer;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+    .navbar-links-to-right li :hover {
+      background-color: bisque;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    @media only screen and (max-width: 768px) {
+      .navbar a {
+        font-size: 20px;
+      }
+
+      .navbar_logo img {
+        max-width: 80px;
+      }
     }
   }
 }
-
-.sidebar {
-  width: 300px;
-  /* height: calc(100vh - 110px); */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: rgba(226, 223, 223, 0.7);
-  padding: 15px;
-  scroll-margin-top: 350px;
-  z-index: 11;
-  position: fixed;
-  right: 0;
-  top: 110px;
-  overflow-y: auto;
-  margin-bottom: 50px;
-
-  .sidebar-foodcart {
-    display: block;
-    height: 100%;
-    margin-bottom: 100px;
-  }
-
-  .confirm-button {
-    /* add your styles for the confirm button*/
-
-    cursor: pointer;
-    margin-bottom: 100px;
-    padding: 10px;
-    color: #000;
-    text-align: center;
-    font-family: Inter;
-    font-size: 24px;
-    font-style: normal;
-    text-decoration: none;
-    border-radius: 30px;
-    background: rgba(197, 110, 51, 0.7);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  }
-}
-
 .footer {
   width: 100%;
   position: relative;
@@ -407,7 +332,6 @@
   overflow-y: auto;
   background-color: rgba(255, 255, 255, 0.2);
 }
-
 .sidebar {
   width: 300px;
   display: flex;
@@ -422,25 +346,59 @@
   top: 110px;
   overflow-y: auto;
   margin-bottom: 50px;
-}
 
-.sidebar-foodcart {
+  .sidebar-foodcart {
   display: block;
   height: 100%;
   margin-bottom: 100px;
-}
+  }
 
-.confirm-button {
-  cursor: pointer;
-  margin-bottom: 100px;
-  padding: 10px;
-  color: #000;
-  text-align: center;
-  font-family: Inter;
-  font-size: 24px;
-  font-style: normal;
-  text-decoration: none;
-  border-radius: 30px;
-  background: rgba(197, 110, 51, 0.7);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  #cartmeals {
+    .cartmealBoxes {
+      width: 17em;
+      display: flex;
+      justify-content: center;
+      justify-content: space-around;
+      text-align: center;
+      border-style: solid;
+      border-radius: 5%;
+      border-color: bisque;
+      margin: 0.5em;
+      background-color: rgba(255, 255, 255, 0.7);
+      .cartbuttonContainer {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        margin: 5px;
+        width: 5em;
+        justify-content: space-around;
+        z-index: 1;
+  
+        .counter__output {
+          margin: 0.5em;
+          border-radius: 15%;
+          border-style: solid;
+          border-width: 2px;
+          background-color: white;
+          display: inline-block;
+          width: 1em;
+        }
+      }
+    }
+  }
+
+  .confirm-button {
+    cursor: pointer;
+    margin-bottom: 100px;
+    padding: 10px;
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    text-decoration: none;
+    border-radius: 30px;
+    background: rgba(197, 110, 51, 0.7);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
 }
