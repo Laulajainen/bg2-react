@@ -1,7 +1,7 @@
 import { React } from "react";
 import MealButtons from "./MealButtons";
-import ContentWrapper from "./ContentWrapper";
-import BackgroundCover from "./BackgroundCover";
+import ContentWrapper from "./BackgroundComponents/ContentWrapper";
+import BackgroundCover from "./BackgroundComponents/BackgroundCover";
 //Den här komponenten söker fram varenda rätt i våran lista av rätter och returnerar objekt med
 // titel på rätt, bild, beskrivning, eventuella allergener, pris och knapparna för att välja antal.
 export default function MealsObjects({ mealData, changeMealCounter }) {
@@ -12,7 +12,11 @@ export default function MealsObjects({ mealData, changeMealCounter }) {
           return (
             <div key={index} className="mealBoxes">
               <h3>{meal.title}</h3>
-              <img className="mealImages" src={meal.mealImage} alt={"Bild på " + meal.title} />
+              <img
+                className="mealImages"
+                src={meal.mealImage}
+                alt={"Bild på " + meal.title}
+              />
               <p>{meal.description}</p>
               <div className="allergyContainer">
                 {meal.containsNuts && (
