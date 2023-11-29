@@ -28,22 +28,12 @@ function Maps() {
     <div className="click-maps">
       <div className="contact-content">
         {" "}
-        <img
-          src="./assets/map.JPG"
-          alt="map"
-          onClick={() => window.open(url, "_blank")}
-        />
+        <img src="./images/map.JPG" alt="map" onClick={() => window.open(url, "_blank")} />
         <div>
-          <h6
-            onClick={() => window.open(url, "_blank")}
-            style={{ cursor: "pointer" }}
-          >
+          <h6 onClick={() => window.open(url, "_blank")} style={{ cursor: "pointer" }}>
             Tucgatan 1
           </h6>
-          <h6
-            onClick={() => window.open(url, "_blank")}
-            style={{ cursor: "pointer" }}
-          >
+          <h6 onClick={() => window.open(url, "_blank")} style={{ cursor: "pointer" }}>
             565 37 Linköping
           </h6>
         </div>{" "}
@@ -60,9 +50,7 @@ export default function Contact() {
           <div className="contact-container">
             <h1>Kontakt</h1>
             <div className="contact_one">
-              <div style={{ display: "flex", justifyContent: "center" }}>
-                {text}
-              </div>
+              <div style={{ display: "flex", justifyContent: "center" }}>{text}</div>
               <div className="contact_two">
                 {text1}
                 {text2}
