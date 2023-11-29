@@ -8,6 +8,23 @@ const Navbar = ({ mealData, changeMealCounter, confirmOrder }) => {
   // Hantera sidomenyns syndlighet
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [firstItemAdded, setFirstItemAdded] = useState(false);
+  const [itemStyle, setItemStyle] = useState({});
+
+  useEffect(() => {
+    if (isSidebarOpen) {
+      console.log("nu öppnar vi");
+      setItemStyle({
+        transform: "translateX(0em)",
+        transition: "transform 0.7s ease-in-out"
+    });
+   } else {
+    console.log("nu stänger vi");
+      setItemStyle({
+        transform: "translateX(22em)",
+        transition: "transform 0.7s ease-in-out"
+    });
+  }
+  }, [isSidebarOpen]);
 
   // Funktion för att ändra synligheten
   const toggleSidebar = () => {
@@ -49,13 +66,14 @@ const Navbar = ({ mealData, changeMealCounter, confirmOrder }) => {
       </ul>
 
       {/* Visas om isSidebarOpen är true */}
-      {isSidebarOpen && (
+      {true && (
         <Sidebar
           show={isSidebarOpen}
           mealData={mealData}
           changeMealCounter={changeMealCounter}
           confirmOrder={confirmOrder}
           toggleSidebar={toggleSidebar}
+          style={itemStyle}
         />
       )}
     </nav>

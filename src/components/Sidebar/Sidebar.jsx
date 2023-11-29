@@ -1,6 +1,6 @@
 import Foodcart from "../FoodCart";
 
-export default function Sidebar({ show, mealData, changeMealCounter, confirmOrder, toggleSidebar }) {
+export default function Sidebar({ show, mealData, changeMealCounter, confirmOrder, toggleSidebar, style }) {
   const hasItems = mealData.some((item) => item.count > 0);
 
   const handleConfirm = () => {
@@ -9,10 +9,10 @@ export default function Sidebar({ show, mealData, changeMealCounter, confirmOrde
   };
 
   return (
-    <div className="sidebar">
+    <div className="sidebar" style={style}>
       <h1>Kundkorg</h1>
       <div className="sidebar-foodcart">
-        {show ? (
+        {true ? (
           <Foodcart mealData={mealData} changeMealCounter={changeMealCounter} />
         ) : null}
       </div>
