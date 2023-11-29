@@ -12,11 +12,11 @@ import Confirmation from "./components/Confirmation";
 
 const App = () => {
   const [mealData, setMealData] = useState(MealsList); //App är förälder till både kundkorg och menysidan, alltså lägger vi datan här.
-  const [confirmedItems, setConfirmedItems] = useState([])
+  const [confirmedItems, setConfirmedItems] = useState([]);
   const navigate = useNavigate();
 
   function changeMealCounter(index, modifier) {
-    setMealData(prevMealData => {
+    setMealData((prevMealData) => {
       const tempMeals = [...prevMealData];
       tempMeals[index] = { ...tempMeals[index], count: tempMeals[index].count + modifier };
       return tempMeals;
@@ -31,15 +31,25 @@ const App = () => {
 
   return (
     <>
-      <Navbar mealData={mealData} changeMealCounter={changeMealCounter} confirmOrder={confirmOrder}/>
+      <Navbar
+        mealData={mealData}
+        changeMealCounter={changeMealCounter}
+        confirmOrder={confirmOrder}
+      />
 
       <div className="container">
         {
           <Routes>
             <Route path="" element={<Start />} />
-            <Route path="/menu" element={<MealObjects mealData={mealData} changeMealCounter={changeMealCounter}/>} />
+            <Route
+              path="/menu"
+              element={<MealObjects mealData={mealData} changeMealCounter={changeMealCounter} />}
+            />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/confirmation" element={<Confirmation confirmedItems={confirmedItems}/>} />
+            <Route
+              path="/confirmation"
+              element={<Confirmation confirmedItems={confirmedItems} />}
+            />
           </Routes>
         }
       </div>
