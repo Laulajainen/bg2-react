@@ -12,32 +12,29 @@ import Confirmation from "./components/Confirmation";
 
 const App = () => {
   const [mealData, setMealData] = useState(MealsList); //App är förälder till både kundkorg och menysidan, alltså lägger vi datan här.
-  const [confirmedItems, setConfirmedItems] = useState([]);
+  const [confirmedItems, setConfirmedItems] = useState([]); //Håller datan som går iväg till Confirmation-sidan.
   const navigate = useNavigate();
 
-  function changeMealCounter(index, modifier) {
-    setMealData((prevMealData) => {
+  function changeMealCounter(index, modifier) { //Ändrar värdet på .count hos index för föremålet som knappen som hör till.
+
       const tempMeals = [...prevMealData];
       tempMeals[index] = { ...tempMeals[index], count: tempMeals[index].count + modifier };
       return tempMeals;
     });
   }
 
-  function confirmOrder() {
+  function confirmOrder() { // När confirmedOrder kallas kopierar vi mealData och skickar iväg till Confirmation.
     setConfirmedItems(mealData.slice());
-    setMealData(MealsList);
-    navigate("/confirmation", { confirmedItems: { confirmedItems } });
+    setMealData(MealsList); // mealData nollas.
+    navigate("/confirmation", { confirmedItems: { confirmedItems } });  // Routen sätts till Confirmation, ny vy på sidan.
   }
 
   return (
     <>
-      <Navbar
-        mealData={mealData}
-        changeMealCounter={changeMealCounter}
-        confirmOrder={confirmOrder}
-      />
 
-      <div className="container">
+      <Navbar mealData={mealData} changeMealCounter={changeMealCounter} confirmOrder={confirmOrder}/> 
+
+      <div className="container"> 
         {
           <Routes>
             <Route path="" element={<Start />} />

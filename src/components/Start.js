@@ -35,12 +35,12 @@ export default function Start() {
 
   return (
     <div id="start">
-      <ContentWrapper>
+      <ContentWrapper> {/* Standardwrapper */}
         <Video />
         <div id="startTextWrapper">
           <TextSection />
         </div>
-        <BackgroundCover />
+        <BackgroundCover /> {/* Standardfilter på bakgrund. */}
       </ContentWrapper>
       </div>
   );
