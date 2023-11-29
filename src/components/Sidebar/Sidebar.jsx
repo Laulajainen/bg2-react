@@ -1,7 +1,12 @@
-import "./Sidebar.css";
 import Foodcart from "../FoodCart";
 
-export default function Sidebar({ show, mealData, changeMealCounter, confirmOrder, toggleSidebar }) {
+export default function Sidebar({
+  show,
+  mealData,
+  changeMealCounter,
+  confirmOrder,
+  toggleSidebar,
+}) {
   const hasItems = mealData.some((item) => item.count > 0);
 
   const handleConfirm = () => {
@@ -9,6 +14,7 @@ export default function Sidebar({ show, mealData, changeMealCounter, confirmOrde
     confirmOrder();
   };
 
+  // struktur för sidofältet
   return (
     <div className="sidebar">
       <h1>Kundkorg</h1>
