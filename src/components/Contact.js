@@ -1,5 +1,5 @@
-import ContentWrapper from "./ContentWrapper";
-import BackgroundCover from "./BackgroundCover";
+import ContentWrapper from "./BackgroundComponents/ContentWrapper";
+import BackgroundCover from "./BackgroundComponents/BackgroundCover";
 
 //Information om denna vy
 const text = (
