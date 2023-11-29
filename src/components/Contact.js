@@ -29,7 +29,7 @@ function Maps() {
       <div className="contact-content">
         {" "}
         <img
-          src="./assets/map.JPG"
+          src="./images/map.JPG"
           alt="map"
           onClick={() => window.open(url, "_blank")}
         />

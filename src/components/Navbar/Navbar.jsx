@@ -39,7 +39,7 @@ const Navbar = ({ mealData, changeMealCounter, confirmOrder }) => {
         <li className="contactlink">
           <Link to="/contact">Kontakt</Link>
         </li>
-        <li className="cartbutton" onClick={toggleSidebar}>
+        <li className="cartbutton" onClick={toggleSidebar} tabIndex={0}>
           <TiShoppingCart />
         </li>
       </ul>

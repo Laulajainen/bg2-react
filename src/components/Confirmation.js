@@ -7,9 +7,7 @@ export default function Confirmation({ confirmedItems }) {
 
   return (
     <div id="confirmation">
-      <ContentWrapper>
-        {" "}
-        {/* Standardwrapper. */}
+      <ContentWrapper> {/* Standardwrapper. */}
         <div className="confirmationAlign">
           <ConfirmationText />
         </div>
@@ -51,9 +49,7 @@ export default function Confirmation({ confirmedItems }) {
   }
 
   function ListedItems() {
-    {
-      /* Stolpar upp objekt från arrayen in i tabellen. */
-    }
+    {/* Stolpar upp objekt från arrayen in i tabellen. */}
     return confirmedItems.map((item) => {
       const amount = item.count > 1 ? item.count + " x " : ""; //Enstaka objekt av en typ skrivs utan "# x "
       const totalPrice = item.price * item.count; //Den aktuella radens totala kostnad. Ej totalen för hela köpet.
