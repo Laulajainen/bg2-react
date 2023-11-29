@@ -98,7 +98,7 @@
   font-size: 21px;
   z-index: 1;
   -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
 }
 #start .videoContainer {
   position: relative;
@@ -109,7 +109,7 @@
   height: 100vh;
   width: 100vw;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 #contact .contact-content {
@@ -119,7 +119,7 @@
   z-index: 1;
   background-color: rgba(255, 255, 255, 0.5);
   -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
 }
 #contact .click-maps {
   display: flex;
@@ -130,7 +130,7 @@
   font-size: 21px;
   z-index: 1;
   -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
 }
 #contact .click-maps img {
   width: 100%;
@@ -149,7 +149,7 @@
   flex-direction: column;
   z-index: 1;
   -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   max-width: 100vw;
 }
 #contact .contact_one {
@@ -184,7 +184,7 @@
   z-index: 1;
   background-color: rgba(255, 255, 255, 0.5);
   -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
   text-align: center;
 }
 #confirmation .confirmationAlign .confirmationMessage .tableContainer {
@@ -197,7 +197,12 @@
   max-width: 100%;
   white-space: nowrap;
 }
-#confirmation .confirmationAlign .confirmationMessage .tableContainer table #sumCell {
+#confirmation
+  .confirmationAlign
+  .confirmationMessage
+  .tableContainer
+  table
+  #sumCell {
   text-align: right;
   border-top: 1px solid;
 }
@@ -219,6 +224,7 @@
 }
 .navbar .navbar_logo {
   display: flex;
+  flex-shrink: 1;
   justify-content: flex-start;
 }
 .navbar li {
@@ -289,6 +295,16 @@
 .navbar-links-to-right .navbar-links-to-right li :hover {
   background-color: bisque;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar a {
+    font-size: 20px;
+  }
+
+  .navbar_logo img {
+    max-width: 80px;
+  }
 }
 
 .sidebar {
@@ -382,4 +398,42 @@
   z-index: 0;
   overflow-y: auto;
   background-color: rgba(255, 255, 255, 0.2);
-}/*# sourceMappingURL=styles.css.map */
+}
+
+.sidebar {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(226, 223, 223, 0.7);
+  padding: 15px;
+  scroll-margin-top: 350px;
+  z-index: 11;
+  position: fixed;
+  right: 0;
+  top: 110px;
+  overflow-y: auto;
+  margin-bottom: 50px;
+}
+
+.sidebar-foodcart {
+  display: block;
+  height: 100%;
+  margin-bottom: 100px;
+}
+
+.confirm-button {
+  cursor: pointer;
+  margin-bottom: 100px;
+  padding: 10px;
+  color: #000;
+  text-align: center;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  text-decoration: none;
+  border-radius: 30px;
+  background: rgba(197, 110, 51, 0.7);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+/*# sourceMappingURL=styles.css.map */

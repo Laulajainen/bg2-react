@@ -19,7 +19,10 @@ const App = () => {
     //Ändrar värdet på .count hos index för föremålet som knappen som hör till.
     setMealData((prevMealData) => {
       const tempMeals = [...prevMealData];
-      tempMeals[index] = { ...tempMeals[index], count: tempMeals[index].count + modifier };
+      tempMeals[index] = {
+        ...tempMeals[index],
+        count: tempMeals[index].count + modifier,
+      };
       return tempMeals;
     });
   }
@@ -33,19 +36,26 @@ const App = () => {
 
   return (
     <>
+      {/* Tar emot måltidsdata och funktioner */}
       <Navbar
         mealData={mealData}
         changeMealCounter={changeMealCounter}
         confirmOrder={confirmOrder}
       />
 
+      {/* Container för olika sidor som går att besöka */}
       <div className="container">
         {
           <Routes>
             <Route path="" element={<Start />} />
             <Route
               path="/menu"
-              element={<MealObjects mealData={mealData} changeMealCounter={changeMealCounter} />}
+              element={
+                <MealObjects
+                  mealData={mealData}
+                  changeMealCounter={changeMealCounter}
+                />
+              }
             />
             <Route path="/contact" element={<Contact />} />
             <Route
