@@ -2,18 +2,20 @@ import React from "react";
 import images from "../../constants/images";
 import "./Navbar.css";
 import { TiShoppingCart } from "react-icons/ti";
-
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import Sidebar from "../Sidebar/Sidebar";
 
 const Navbar = ({ mealData, changeMealCounter }) => {
+  // State för sidofältets synlighet
   const [isSidebarOpen, setSidebarOpen] = useState(false);
 
+  // Funktion för att ändra synligheten
   const toggleSidebar = () => {
     setSidebarOpen(!isSidebarOpen);
   };
 
+  // Struktur för navbar
   return (
     <nav className="navbar">
       <div className="navbar_logo">
