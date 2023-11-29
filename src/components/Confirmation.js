@@ -1,23 +1,23 @@
 import ContentWrapper from "./ContentWrapper";
 import BackgroundCover from "./BackgroundCover";
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 export default function Confirmation({ confirmedItems }) {
 
-  confirmedItems = sortItems();
+  confirmedItems = sortItems(); //Indata trimmas och sorteras efter typ (varmrätt, dryck, o.s.v.).
 
   return (
     <div id="confirmation">
-      <ContentWrapper>
+      <ContentWrapper> {/* Standardwrapper. */}
         <div className="confirmationAlign">
-          <ConfirmationText />
+          <ConfirmationText />  
         </div>
-        <BackgroundCover />
+        <BackgroundCover /> {/* Standardfilter på bakgrund. */}
       </ContentWrapper>
     </div>
   );
 
-  function ConfirmationText() {
+  function ConfirmationText() {  {/* Textruta där köpet presenteras. */}
 
     return (
       <section className="confirmationMessage">
@@ -28,7 +28,7 @@ export default function Confirmation({ confirmedItems }) {
         <div className="tableContainer">
           <table>
             <tbody>
-              <ListedItems />
+              <ListedItems /> 
               <tr>
                 <td></td>
                 <td></td>
@@ -46,10 +46,10 @@ export default function Confirmation({ confirmedItems }) {
     );
   }
 
-  function ListedItems() {
+  function ListedItems() { {/* Stolpar upp objekt från arrayen in i tabellen. */}
     return confirmedItems.map((item) => {
-      const amount = item.count > 1 ? item.count + " x " : "";
-      const totalPrice = item.price * item.count;
+      const amount = item.count > 1 ? item.count + " x " : "";  //Enstaka objekt av en typ skrivs utan "# x "
+      const totalPrice = item.price * item.count; //Den aktuella radens totala kostnad. Ej totalen för hela köpet.
 
       return (
         <tr key={item.title}>
@@ -61,9 +61,9 @@ export default function Confirmation({ confirmedItems }) {
     });
   }
 
-  function sortItems() {
-    confirmedItems = confirmedItems.filter((item) => item.count > 0);
-    confirmedItems.sort((a, b) => {
+  function sortItems() {  //Trimmar och sorterar indata.
+    confirmedItems = confirmedItems.filter((item) => item.count > 0); //Trimmar bort objekt som inte klickats i av användaren.
+    confirmedItems.sort((a, b) => {     //Kvarvarande array sorteras utefter typ av objekt. Varmrätt med varmrätt o.s.v.
       const typeA = a.type.toUpperCase();
       const typeB = b.type.toUpperCase();
       if (typeA < typeB) {
@@ -78,11 +78,11 @@ export default function Confirmation({ confirmedItems }) {
     return confirmedItems;
   }
 
-  function getTotal() {
+  function getTotal() {   //Beräknar totalkostnad för ordern.
     let totalSum = 0;
 
     confirmedItems.forEach((item) => {
-      totalSum += item.price * item.count;
+      totalSum += item.price * item.count;  //(Priset) * (så många ex. av objektet som är tillagda).
     })
     return totalSum;
   }
