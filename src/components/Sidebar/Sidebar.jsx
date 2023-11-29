@@ -1,4 +1,4 @@
-import "./Sidebar.css";
+// import "./Sidebar.css";
 import Foodcart from "../FoodCart";
 
 export default function Sidebar({ show, mealData, changeMealCounter, confirmOrder, toggleSidebar }) {

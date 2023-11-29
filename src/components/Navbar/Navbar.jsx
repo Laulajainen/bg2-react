@@ -1,5 +1,4 @@
 import React from "react";
-import images from "../../constants/images";
 import { TiShoppingCart } from "react-icons/ti";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -25,7 +24,8 @@ const Navbar = ({ mealData, changeMealCounter, confirmOrder }) => {
     <nav className="navbar">
       <div className="navbar_logo">
         <Link to="">
-          <img src={images.toplogo} alt="topleftlogo"></img>
+          <img src={"/icons/leftlogo.png"} alt="topleftlogo"></img>
+          
         </Link>
       </div>
 

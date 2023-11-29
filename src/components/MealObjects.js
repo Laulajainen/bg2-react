@@ -18,7 +18,7 @@ export default function MealsObjects({ mealData, changeMealCounter }) {
                 {meal.containsNuts && (
                   <img
                     className="allergyContent"
-                    src={"/img/nuts.jpg"}
+                    src={"/icons/nuts.jpg"}
                     alt="Innehåller nötter"
                     title="Innehåller nötter"
                   />
@@ -26,7 +26,7 @@ export default function MealsObjects({ mealData, changeMealCounter }) {
                 {meal.containsEggs && (
                   <img
                     className="allergyContent"
-                    src={"/img/eggs.jpg"}
+                    src={"/icons/eggs.jpg"}
                     alt="Innehåller ägg"
                     title="Innehåller ägg"
                   />
@@ -34,7 +34,7 @@ export default function MealsObjects({ mealData, changeMealCounter }) {
                 {meal.containsGluten && (
                   <img
                     className="allergyContent"
-                    src={"/img/gluten.jpg"}
+                    src={"/icons/gluten.jpg"}
                     alt="Innehåller gluten"
                     title="Innehåller gluten"
                   />
