@@ -1,21 +1,27 @@
 import React from "react";
 import images from "../../constants/images";
-import "./Navbar.css";
 import { TiShoppingCart } from "react-icons/ti";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Sidebar from "../Sidebar/Sidebar";
 
-const Navbar = ({ mealData, changeMealCounter }) => {
-  // State för sidofältets synlighet
+const Navbar = ({ mealData, changeMealCounter, confirmOrder }) => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
+  const [firstItemAdded, setFirstItemAdded] = useState(false);
 
   // Funktion för att ändra synligheten
   const toggleSidebar = () => {
     setSidebarOpen(!isSidebarOpen);
   };
 
-  // Struktur för navbar
+  useEffect(() => {
+    // This will be triggered when mealData changes for the first time
+    if (firstItemAdded == true) {
+      setSidebarOpen(true);
+      setFirstItemAdded(true);
+    }
+  }, [mealData]);
+
   return (
     <nav className="navbar">
       <div className="navbar_logo">
@@ -40,6 +46,8 @@ const Navbar = ({ mealData, changeMealCounter }) => {
           show={isSidebarOpen}
           mealData={mealData}
           changeMealCounter={changeMealCounter}
+          confirmOrder={confirmOrder}
+          toggleSidebar={toggleSidebar}
         />
       )}
     </nav>

@@ -1,18 +1,18 @@
-import { useNavigate } from "react-router-dom";
 import "./Sidebar.css";
 import Foodcart from "../FoodCart";
 
-export default function Sidebar({ show, mealData, changeMealCounter }) {
-  const navigate = useNavigate();
-
-  // kontrollerna om det finns objekt i kundvagnen
+export default function Sidebar({
+  show,
+  mealData,
+  changeMealCounter,
+  confirmOrder,
+  toggleSidebar,
+}) {
   const hasItems = mealData.some((item) => item.count > 0);
 
   const handleConfirm = () => {
-    const confirmedItems = mealData.filter((item) => item.count > 0);
-
-    // navigera till bekräftelsesidan
-    navigate("/confirmation", { state: { confirmedItems } });
+    toggleSidebar();
+    confirmOrder();
   };
 
   // struktur för sidofältet
