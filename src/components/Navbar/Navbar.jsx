@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import Sidebar from "../Sidebar/Sidebar";
 
 const Navbar = ({ mealData, changeMealCounter, confirmOrder }) => {
+  // Hantera sidomenyns syndlighet
   const [isSidebarOpen, setSidebarOpen] = useState(false);
   const [firstItemAdded, setFirstItemAdded] = useState(false);
 
@@ -15,7 +16,7 @@ const Navbar = ({ mealData, changeMealCounter, confirmOrder }) => {
   };
 
   useEffect(() => {
-    // This will be triggered when mealData changes for the first time
+    // Används när mealData ändras för första gången
     if (firstItemAdded == true) {
       setSidebarOpen(true);
       setFirstItemAdded(true);
@@ -23,6 +24,7 @@ const Navbar = ({ mealData, changeMealCounter, confirmOrder }) => {
   }, [mealData]);
 
   return (
+    // Navigationsfältet
     <nav className="navbar">
       <div className="navbar_logo">
         <Link to="">
@@ -41,6 +43,8 @@ const Navbar = ({ mealData, changeMealCounter, confirmOrder }) => {
           <TiShoppingCart />
         </li>
       </ul>
+
+      {/* Visas om isSidebarOpen är true */}
       {isSidebarOpen && (
         <Sidebar
           show={isSidebarOpen}
