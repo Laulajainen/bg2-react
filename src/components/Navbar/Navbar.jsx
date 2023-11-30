@@ -16,9 +16,13 @@ const Navbar = ({ mealData, changeMealCounter, confirmOrder }) => {
 
   useEffect(() => {
     // Används när mealData ändras för första gången
-    if (firstItemAdded == true) {
+    if (firstItemAdded == false && mealData.some((item) => item.count > 0)) {
       setSidebarOpen(true);
       setFirstItemAdded(true);
+    }
+    if (!mealData.some((item) => item.count > 0)) {
+      setSidebarOpen(false);
+      setFirstItemAdded(false);
     }
   }, [mealData]);
 
@@ -39,7 +43,7 @@ const Navbar = ({ mealData, changeMealCounter, confirmOrder }) => {
         <li className="contactlink">
           <Link to="/contact">Kontakt</Link>
         </li>
-        <li className="cartbutton" onClick={toggleSidebar}>
+        <li className="cartbutton" onClick={toggleSidebar} tabIndex={0}>
           <TiShoppingCart />
         </li>
       </ul>
