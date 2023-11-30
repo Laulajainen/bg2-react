@@ -14,14 +14,16 @@ const Navbar = ({ mealData, changeMealCounter, confirmOrder }) => {
     if (isSidebarOpen) {
       console.log("nu öppnar vi");
       setItemStyle({
-        transform: "translateX(0em)",
-        transition: "transform 0.7s ease-in-out"
+        padding: "15px 15px 15px 15px",
+        width: "300px",
+        transition: " width 0.7s ease-in-out"
     });
    } else {
     console.log("nu stänger vi");
       setItemStyle({
-        transform: "translateX(22em)",
-        transition: "transform 0.7s ease-in-out"
+        padding: "15px 0px 15px 0px",
+        width: "0px",
+        transition: "width 0.7s ease-in-out"
     });
   }
   }, [isSidebarOpen]);
