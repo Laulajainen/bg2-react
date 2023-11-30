@@ -12,13 +12,11 @@ export default function Sidebar({ show, mealData, changeMealCounter, confirmOrde
     <div className="sidebar" style={style}>
       <h1>Kundkorg</h1>
       <div className="sidebar-foodcart">
-        {true ? (
-          <Foodcart mealData={mealData} changeMealCounter={changeMealCounter} />
-        ) : null}
+        <Foodcart mealData={mealData} changeMealCounter={changeMealCounter} />
       </div>
       {hasItems && (
         <button className="confirm-button" onClick={handleConfirm}>
-          Confirm Order
+          Konfirmera köp
         </button>
       )}
     </div>

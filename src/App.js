@@ -6,7 +6,7 @@ import Footer from "./components/Footer/Footer";
 import MealObjects from "./components/MealObjects";
 import Start from "./components/Start";
 import Contact from "./components/Contact";
-import MealsList from "./components/MealsList";
+import MealsList from "./components/Data/MealsList";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import Confirmation from "./components/Confirmation";
 

@@ -1,7 +1,7 @@
 import React from "react";
 import ContentWrapper from "./BackgroundComponents/ContentWrapper";
 import BackgroundCover from "./BackgroundComponents/BackgroundCover";
-import startParagraphs from "./StartParagraphs"; //Lyfter in inpsirationstext om restaurangen.
+import startParagraphs from "./Data/StartParagraphs"; //Lyfter in inpsirationstext om restaurangen.
 
 export default function Start() {
   const videoBGPaths = [
