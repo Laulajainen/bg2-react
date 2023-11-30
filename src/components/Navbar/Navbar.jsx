@@ -67,9 +67,7 @@ const Navbar = ({ mealData, changeMealCounter, confirmOrder }) => {
         </li>
       </ul>
 
-      {/* Visas om isSidebarOpen är true */}
-      {true && (
-        <Sidebar
+      <Sidebar
           show={isSidebarOpen}
           mealData={mealData}
           changeMealCounter={changeMealCounter}
@@ -77,7 +75,6 @@ const Navbar = ({ mealData, changeMealCounter, confirmOrder }) => {
           toggleSidebar={toggleSidebar}
           style={itemStyle}
         />
-      )}
     </nav>
   );
 };
